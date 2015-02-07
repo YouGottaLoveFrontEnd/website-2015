@@ -1,0 +1,8 @@
+$breakpoints: add-breakpoint("mobile",			0px 480px);
+$breakpoints: add-breakpoint("phablet",			481px 768px);
+$breakpoints: add-breakpoint("tablet",			769px 1024px);
+$breakpoints: add-breakpoint("desktop",			1024px);
+
+$breakpoints: add-breakpoint("up to mobile",	0px 480px);
+$breakpoints: add-breakpoint("up to phablet",	0px 768px);
+$breakpoints: add-breakpoint("up to tablet",	0px 1024px);

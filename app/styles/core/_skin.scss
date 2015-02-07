@@ -1,14 +1,21 @@
-body {
-	font-family: $skin-font-family;
-	font-size: $skin-font-size;
-// 	color: $skin-color;
-// 	background: $skin-background;
+html {
+	@include respond-to("mobile") {
+		font-size: 10px;
+	}
+
+	@include respond-to("phablet") {
+		font-size: 12px;
+	}
+
+	@include respond-to("tablet") {
+		font-size: 16px;
+	}
+
+	@include respond-to("desktop") {
+		font-size: 20px;
+	}
 }
 
-// a {
-// 	color: $skin-link-color;
-
-// 	&:hover {
-// 		color: $skin-link-color_hover;
-// 	}
-// }
+body {
+	font-family: $skin-font-family;
+}

@@ -152,6 +152,7 @@ module.exports = function (grunt) {
 		// Compiles Sass to CSS and generates necessary files if requested
 		compass: {
 			options: {
+				require: 'breakpoint',
 				sassDir: '<%= config.app %>/styles',
 				cssDir: '.tmp/styles',
 				imagesDir: '<%= config.app %>/images',

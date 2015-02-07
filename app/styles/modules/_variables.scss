@@ -15,7 +15,6 @@ $color-black: #000000;
 // Font
 // ----------------------------------------------------------------------
 $font-family: Futura, Arial;
-$font-size: 12px;
 
 // ======================================================================
 // =| Core |=============================================================
@@ -23,12 +22,7 @@ $font-size: 12px;
 
 // Skin
 // ----------------------------------------------------------------------
-// $skin-color: $color-primary;
-// $skin-background: $color-invert;
 $skin-font-family: $font-family;
-$skin-font-size: $font-size;
-// $skin-link-color: $color-highlight;
-// $skin-link-color_hover: lighten($skin-link-color, $state-factor);
 
 // ======================================================================
 // =| Component Configuration |==========================================
@@ -36,7 +30,7 @@ $skin-font-size: $font-size;
 
 // Intro
 // ----------------------------------------------------------------------
-$intro-font-size: 5.5rem;
+$intro-font-size: 4rem;
 $intro-logo-font-size: 100%;
 $intro-logo-line-height: 1.25;
 $intro-logo-padding: 5%;

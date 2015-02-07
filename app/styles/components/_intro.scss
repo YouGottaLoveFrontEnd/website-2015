@@ -25,6 +25,10 @@
 		font-size: $intro-title-subtitle-font-size;
 		font-style: italic;
 		letter-spacing: 2px;
+
+		@include respond-to("mobile") {
+			font-size: $intro-title-subtitle-font-size * 0.9;
+		}
 	}
 
 	.datetime {
