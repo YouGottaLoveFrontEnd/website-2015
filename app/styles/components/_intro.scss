@@ -1,0 +1,69 @@
+.intro {
+	@include brand-gradient();
+	height: 100%;
+	position: relative;
+	color: $color-white;
+	text-align: center;
+	text-transform: uppercase;
+	font-size: $intro-font-size;
+
+	.inner {
+		@include position(absolute, 50%, nil, nil, 50%);
+		@include translate(-50%, -50%);
+		width: 100%;
+	}
+
+	%title {
+		@include position(absolute, nil, nil, nil, 50%);
+		width: 100%;
+	}
+
+	.subtitle {
+		@extend %title;
+		@include translate(-50%, -100%);
+		top: $intro-title-offset;
+		font-size: $intro-title-subtitle-font-size;
+		font-style: italic;
+		letter-spacing: 2px;
+	}
+
+	.datetime {
+		@extend %title;
+		@include translate(-50%, 100%);
+		bottom: $intro-title-offset;
+		font-size: $intro-title-datetime-font-size;
+	}
+}
+
+.logo {
+	border: solid 10px;
+	line-height: $intro-logo-line-height;
+	font-size: $intro-logo-font-size;
+	text-align: left;
+	display: inline-block;
+	padding: $intro-logo-padding;
+
+	a {
+		display: block;
+		text-decoration: none;
+		color: inherit;
+	}
+
+	.word {
+		display: block;
+		white-space: nowrap;
+	}
+
+	.is-censored {
+		color: transparent;
+		position: relative;
+		letter-spacing: -0.15em;	// controls the space we're reserving
+
+		&:after {
+			@include position(absolute, 0, nil, nil, 9%);
+			@include translateY(-63%);
+			content: "___";
+			color: $color-white;
+		}
+	}
+}

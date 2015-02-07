@@ -21,3 +21,7 @@
 	@include set-if-exists(content, $content);
 	display: inline-block;
 }
+
+@mixin brand-gradient($direction: bottom) {
+	@include background-image(linear-gradient(to $direction, $color-blue 3%, $color-green 40%, $color-green));
+}

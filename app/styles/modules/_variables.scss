@@ -1,187 +1,45 @@
 // ======================================================================
-// =| TPA Styles |=======================================================
+// =| Config |===========================================================
 // ======================================================================
-
-// TPA Colors
-// ----------------------------------------------------------------------
-$tpa-color-1: unquote("{{color-1}}");
-$tpa-color-2: unquote("{{color-2}}");
-$tpa-color-3: unquote("{{color-3}}");
-$tpa-color-4: unquote("{{color-4}}");
-$tpa-color-5: unquote("{{color-5}}");
-$tpa-color-6: unquote("{{color-6}}");
-$tpa-color-7: unquote("{{color-7}}");
-$tpa-color-8: unquote("{{color-8}}");
-$tpa-color-9: unquote("{{color-9}}");
-$tpa-color-10: unquote("{{color-10}}");
-$tpa-color-11: unquote("{{color-11}}");
-$tpa-color-12: unquote("{{color-12}}");
-$tpa-color-13: unquote("{{color-13}}");
-$tpa-color-14: unquote("{{color-14}}");
-$tpa-color-15: unquote("{{color-15}}");
-$tpa-color-16: unquote("{{color-16}}");
-$tpa-color-17: unquote("{{color-17}}");
-$tpa-color-18: unquote("{{color-18}}");
-$tpa-color-19: unquote("{{color-19}}");
-$tpa-color-20: unquote("{{color-20}}");
-$tpa-color-21: unquote("{{color-21}}");
-$tpa-color-22: unquote("{{color-22}}");
-$tpa-color-23: unquote("{{color-23}}");
-$tpa-color-24: unquote("{{color-24}}");
-$tpa-color-25: unquote("{{color-25}}");
-
-// TPA Fonts
-// ----------------------------------------------------------------------
-// We need to use ; because the from TPA includes "font: " as a prefix,
-// so the outcome after replace is  something like -
-// 		font:; font: normal normal normal 14px/1.2em arial"ms pgothic",dotum,helvetica,sans-serif
-$tpa-font-0: unquote("; {{Title}}");
-$tpa-font-1: unquote("; {{Menu}}");
-$tpa-font-2: unquote("; {{Page-title}}");
-$tpa-font-3: unquote("; {{Heading-XL}}");
-$tpa-font-4: unquote("; {{Heading-L}}");
-$tpa-font-5: unquote("; {{Heading-M}}");
-$tpa-font-6: unquote("; {{Heading-S}}");
-$tpa-font-7: unquote("; {{Body-L}}");
-$tpa-font-8: unquote("; {{Body-M}}");
-$tpa-font-9: unquote("; {{Body-S}}");
-$tpa-font-10: unquote("; {{Body-XS}}");
-
-// ======================================================================
-// =| External Constants |===============================================
-// ======================================================================
-$external-color-facebook: #3a5897;
-$external-color-twitter: #2fc7f2;
-$external-color-googleplus: #f95c38;
-$external-color-pinterest: #f01951;
-$external-color-fancy: #40a4e6;
-
-// ======================================================================
-// =| Common Variables |=================================================
-// ======================================================================
-
-$size-factor: 10px !default;
-
-// A state of element (hover, active, disabled, focused and etc)
-// ----------------------------------------------------------------------
-$state-factor: 5% !default;
+$size-factor: 10px;
+$state-factor: 10%;
 
 // Colors Palette
 // ----------------------------------------------------------------------
-$color-primary: #575757 !default;		// Dark gray
-$color-secondary: #c9c9c9 !default;		// Light gray
-$color-invert: #fff !default;		// White
-$color-highlight: #2e9ec2 !default;		// Blue
-$color-success: #50cb81 !default;		// Green
-$color-error: #ed5f4b !default;			// Red
+$color-blue: #1105e7;
+$color-green: #00d09d;
+$color-white: #ffffff;
+$color-beige: #1a1a1a;
+$color-black: #000000;
 
 // Font
 // ----------------------------------------------------------------------
-$font-family: "Open Sans", Arial !default;
-$font-weight-bold: 700 !default;
-$font-weight-semibold: 600 !default;
-$font-weight-regular: 400 !default;
-$font-weight-light: 300 !default;
-$font-size-regular: 12px !default;
+$font-family: Futura, Arial;
+$font-size: 12px;
 
 // ======================================================================
 // =| Core |=============================================================
 // ======================================================================
-$enable-skin: true !default;
-$skin-color: $color-primary !default;
-$skin-background: $color-invert !default;
-$skin-font-family: $font-family !default;
-$skin-font-size: $font-size-regular !default;
-$skin-font-weight: $font-weight-regular !default;
-$skin-link-color: $color-highlight !default;
-$skin-link-color_hover: lighten($skin-link-color, $state-factor) !default;
+
+// Skin
+// ----------------------------------------------------------------------
+// $skin-color: $color-primary;
+// $skin-background: $color-invert;
+$skin-font-family: $font-family;
+$skin-font-size: $font-size;
+// $skin-link-color: $color-highlight;
+// $skin-link-color_hover: lighten($skin-link-color, $state-factor);
 
 // ======================================================================
 // =| Component Configuration |==========================================
 // ======================================================================
-$enable-common: true !default;
 
-// Icons
+// Intro
 // ----------------------------------------------------------------------
-$enable-glyphicons: true !default;
-$glyphicons-font-path: "" !default;		// Relative to Compass fonts folder
-
-// Buttons
-// ----------------------------------------------------------------------
-$enable-buttons: true !default;
-$button-color: $color-invert !default;
-$button-color_hover: lighten($button-color, $state-factor) !default;
-$button-color_active: darken($button-color, $state-factor) !default;
-$button-background: $color-primary !default;
-$button-background_hover: lighten($button-background, $state-factor) !default;
-$button-background_active: darken($button-background, $state-factor) !default;
-$button-font-family: $skin-font-family !default;
-$button-font-size: $skin-font-size !default;
-$button-padding-spacing-horizontal: 2 !default;
-$button-padding-spacing-vertical: 1 !default;
-
-// Inputs
-// ----------------------------------------------------------------------
-$enable-inputs: true !default;
-$enable-inputs-input: $enable-inputs !default;
-$enable-inputs-checkable-checkbox: $enable-inputs !default;
-$enable-inputs-checkable-radio: $enable-inputs !default;
-$enable-inputs-select: $enable-inputs !default;
-
-// Common
-$inputs-color: $color-primary !default;
-$inputs-background: $color-invert !default;
-$inputs-border-color: $color-secondary !default;
-$inputs-border-width: 1px !default;
-$inputs-border: solid $inputs-border-width $inputs-border-color !default;
-$inputs-border-color_focus: $color-primary !default;
-$inputs-font: nil !default;
-$inputs-font-family: $skin-font-family !default;
-$inputs-font-size: 16px !default;
-
-// Regular Input
-$inputs-input-size: size(3.8) !default;
-$inputs-input-placeholder-color: $color-secondary !default;
-$inputs-input-padding-spacing-vertical: 0 !default;
-$inputs-input-padding-spacing-horizontal: 1.4 !default;
-
-// Checkable
-$inputs-checkable-checkbox-size: size(3) !default;
-$inputs-checkable-checkbox-checked-size: size(2) !default;
-$inputs-checkable-checkbox-checked-icon-family: "glyphicon";
-$inputs-checkable-checkbox-checked-icon-name: "check";
-$inputs-checkable-radio-size: size(2) !default;
-$inputs-checkable-radio-checked-size: $inputs-checkable-radio-size / 2 !default;
-
-// Select
-$inputs-input-select-height: $inputs-input-size !default;
-$inputs-input-select-height: 30px;
-$input-select-static-background: #fff !default;
-$input-select-static-color: #000 !default;
-$inputs-select-padding-spacing-horizontal: 1 !default;
-$inputs-select-caret-color: $color-primary !default;
-$inputs-select-border-color_hover: $color-highlight !default;
-$inputs-select-font: nil !default;
-$inputs-select-font-size: 14px !default;
-$inputs-select-font-family: $inputs-font-family !default;
-$inputs-select-caret-size: 14px !default;
-$inputs-select-caret-icon-family: "glyphicon" !default;
-$inputs-select-caret-icon-name: "arrow-down" !default;
-$inputs-select-padding-spacing-vertical: (($inputs-input-select-height - $inputs-select-font-size) / 4 - 2px) !default;
-$inputs-select-caret-position-right: size($inputs-select-padding-spacing-horizontal) / 2 !default;
-$ms-input-select-padding-left: size($inputs-select-padding-spacing-horizontal) !default;
-
-// Loader
-// ----------------------------------------------------------------------
-$enable-loader: true !default;
-$loader-color-primary: $color-secondary !default;
-$loader-color-highlight: $color-highlight !default;
-$loader-border-width: 5px !default;
-$loader-border-opacity: 0.7 !default;
-
-// Textarea
-// ----------------------------------------------------------------------
-$enable-textarea: true !default;
-$textarea-placeholder-color: $color-secondary !default;
-$textarea-padding-spacing-vertical: 1 !default;
-$textarea-padding-spacing-horizontal: 1 !default;
+$intro-font-size: 5.5rem;
+$intro-logo-font-size: 100%;
+$intro-logo-line-height: 1.25;
+$intro-logo-padding: 5%;
+$intro-title-offset: -5%;
+$intro-title-datetime-font-size: 80%;
+$intro-title-subtitle-font-size: 40%;
