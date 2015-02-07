@@ -1,0 +1,23 @@
+////
+// Sets a value for a property only if value exists.
+// @param $property - the css property to be set
+// @param $value - a values for the property to be set to
+// @param $empty-value - (optional, default nil) definition for "empty value"
+//
+@mixin set-if-exists($property, $value, $empty-value: nil) {
+	@if ($value != $empty-value) {
+		#{$property}: $value;
+	}
+}
+
+////
+// Sets default values for pseudo elements (:before and :after).
+// @param $width - (optional, default: nil) width to be set
+// @param $height - (optional, default: width value) height to be set
+// @param $content - (optional, default: "") the content to be put inside the pseudo element
+//
+@mixin pseudo-element($width: nil, $height: $width, $content: "") {
+	@include dimensions($width, $height);
+	@include set-if-exists(content, $content);
+	display: inline-block;
+}

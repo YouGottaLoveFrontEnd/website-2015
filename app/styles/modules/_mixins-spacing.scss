@@ -1,0 +1,96 @@
+////
+// Returns the value of spacing in px by a multiplier.
+// @param $multiplier - the multiplier the $spacing variable should be multiplied by
+// @return the px of spacing for a given multiplier
+//
+@function size($multiplier: 1) {
+	@if unitless($multiplier) {
+		@return $size-factor * $multiplier;
+	} @else {
+		@return $multiplier;
+	}
+}
+
+////
+// Margin spacing by multipliers.
+// This will eventually print a margin spacing of $multiplier * $size-factor
+// It can be used -
+// 		- with no arguments
+// 		- with 1 arguments (all equal)
+// 		- with 2 arguments (top/bottom and left/right)
+// 		- with 4 arguments (for each side)
+// @param $multiplier-top - (optional, default: 1) multiplier of the top side
+// @param $multiplier-right - (optional, default: multiplier-top value) multiplier of the right side
+// @param $multiplier-bottom - (optional, default: multiplier-top value) multiplier of the bottom side
+// @param $multiplier-left - (optional, default: multiplier-right value) multiplier of the left side
+//
+@mixin spacing-margin($multiplier-top: 1, $multiplier-right: $multiplier-top, $multiplier-bottom: $multiplier-top, $multiplier-left: $multiplier-right) {
+	@include margin-vertical($multiplier-top, $multiplier-bottom);
+	@include margin-horizontal($multiplier-left, $multiplier-right);
+}
+
+////
+// Padding spacing by multipliers.
+// This will eventually print a padding spacing of $multiplier * $size-factor
+// It can be used -
+// 		- with no arguments
+// 		- with 1 arguments (all equal)
+// 		- with 2 arguments (top/bottom and left/right)
+// 		- with 4 arguments (for each side)
+// @param $multiplier-top - (optional, default: 1) multiplier of the top side
+// @param $multiplier-right - (optional, default: multiplier-top value) multiplier of the right side
+// @param $multiplier-bottom - (optional, default: multiplier-top value) multiplier of the bottom side
+// @param $multiplier-left - (optional, default: multiplier-right value) multiplier of the left side
+//
+@mixin spacing-padding($multiplier-top: 1, $multiplier-right: $multiplier-top, $multiplier-bottom: $multiplier-top, $multiplier-left: $multiplier-right) {
+	@include padding-vertical($multiplier-top, $multiplier-bottom);
+	@include padding-horizontal($multiplier-left, $multiplier-right);
+}
+
+////
+// Totally reset the spacing of an element
+//
+@mixin spacing-reset() {
+	padding: 0;
+	margin: 0;
+}
+
+////
+// Give margin spacing vertically, meaning to the top and the bottom
+// @param $size-factor-top - (optional, default $spacing) spacing from the top in px
+// @param $spacing-bottom - (optional, default $spacing-top) spacing from the bottom in px
+//
+@mixin margin-vertical($spacing-top: $spacing, $spacing-bottom: $spacing-top) {
+	margin-top: round(size($spacing-top));
+	margin-bottom: round(size($spacing-bottom));
+}
+
+////
+// Give margin spacing horizontally, meaning to the left and the right
+// @param $spacing-left - (optional, default $spacing) spacing from the left in px
+// @param $spacing-right - (optional, default $spacing-left) spacing from the right in px
+//
+@mixin margin-horizontal($spacing-left: $spacing, $spacing-right: $spacing-left) {
+	margin-left: round(size($spacing-left));
+	margin-right: round(size($spacing-right));
+}
+
+////
+// Give padding spacing vertically, meaning to the top and the bottom
+// @param $spacing-top - (optional, default $spacing) spacing from the top in px
+// @param $spacing-bottom - (optional, default $spacing-top) spacing from the bottom in px
+//
+@mixin padding-vertical($spacing-top: $spacing, $spacing-bottom: $spacing-top) {
+	padding-top: round(size($spacing-top));
+	padding-bottom: round(size($spacing-bottom));
+}
+
+////
+// Give padding spacing horizontally, meaning to the left and the right
+// @param $spacing-left - (optional, default $spacing) spacing from the left in px
+// @param $spacing-right - (optional, default $spacing-left) spacing from the right in px
+//
+@mixin padding-horizontal($spacing-left: $spacing, $spacing-right: $spacing-left) {
+	padding-left: round(size($spacing-left));
+	padding-right: round(size($spacing-right));
+}

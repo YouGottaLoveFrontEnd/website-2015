@@ -1,0 +1,68 @@
+////
+// Reset property on first/last sides (first/last child).
+// You will usually use this for cases where you gave to all children of an element some property (e.g margin)
+// and you need to remove it for the first and last children.
+// The mixin should be applied on the parent of the items.
+// @param $property - the name of the css property to rest
+// @param $value - (optional, default: 0) the value to reset to
+// @param $is-vertical - (optional, default: false) change left/right to be top/bottom (e.g margin-left vs. margin-top)
+// @param $extra-selector - (optional) an css selector to add to after first/last-child selector (e.g. &.first-child .some-other.selector)
+//
+@mixin reset-first-last-sides($property, $value: 0, $is-vertial: false, $extra-selector: "") {
+	$side-first: if($is-vertial, top, left);
+	$side-last: if($is-vertial, bottom, right);
+
+	&:first-child #{$extra-selector} {
+		#{$property}-#{$side-first}: $value;
+	}
+
+	&:last-child #{$extra-selector} {
+		#{$property}-#{$side-last}: $value;
+	}
+}
+
+////
+// Sets width and height for an element.
+// If only 1 arguments was provided use it as both width and height.
+// @param $width - the width to be set
+// @param $height - (optional, default: width's value) - the height to be set
+//
+@mixin dimensions($width, $height: $width) {
+	@include set-if-exists(width, $width);
+	@include set-if-exists(height, $height);
+}
+
+////
+// Set position and top/bottom/left/right values
+// @param $position - value for css `position` property
+// @param $top - value for css `top` property
+// @param $right - value for css `right` property
+// @param $bottom - value for css `bottom` property
+// @param $left - value for css `left` property
+//
+@mixin position($position: nil, $top: nil, $right: nil, $bottom: nil, $left: nil) {
+	@include set-if-exists(position, $position);
+	@include set-if-exists(top, $top);
+	@include set-if-exists(bottom, $bottom);
+	@include set-if-exists(right, $right);
+	@include set-if-exists(left, $left);
+}
+
+////
+// Fix a list of inline blocks by removing the space between the items.
+// The mixin should be applied on the parent of the items.
+// This works only for cases where all the items are always on the same vertical line.
+// @param $is-rtl - (optional, default: false) go to RTL mode
+//
+@mixin inline-blocks($is-rtl: false) {
+	$side: if($is-rtl , right, left);
+
+	& > * {
+		display: inline-block;
+		margin-#{$side}: -3px;
+
+		&:first-child {
+			margin-#{$side}: 0;
+		}
+	}
+}

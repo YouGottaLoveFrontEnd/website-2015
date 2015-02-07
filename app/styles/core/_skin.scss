@@ -1,0 +1,15 @@
+body {
+	font-family: $skin-font-family;
+	font-size: $skin-font-size;
+	font-weight: $skin-font-weight;
+	color: $skin-color;
+	background: $skin-background;
+}
+
+a {
+	color: $skin-link-color;
+
+	&:hover {
+		color: $skin-link-color_hover;
+	}
+}
