@@ -6,3 +6,13 @@ body {
 body {
 	margin: 0;
 }
+
+main {
+	height: 100%;
+
+	&:before,
+	&:after {
+		content: " ";
+		display: table;
+	}
+}

@@ -1,3 +1,4 @@
+// Define responsive font-size. From now we're using only REMs or %.
 html {
 	@include respond-to("mobile") {
 		font-size: 10px;
@@ -18,4 +19,5 @@ html {
 
 body {
 	font-family: $skin-font-family;
+	background: $skin-background;
 }

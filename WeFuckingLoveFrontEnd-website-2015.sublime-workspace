@@ -4,12 +4,28 @@
 		"selected_items":
 		[
 			[
-				"expe",
-				"experiments"
+				"box-",
+				"box-sizing: "
+			],
+			[
+				"font-s",
+				"font-style"
 			],
 			[
 				"tex",
-				"text-decoration: "
+				"text-align-last: "
+			],
+			[
+				"whi",
+				"white-space: "
+			],
+			[
+				"dr",
+				"direction: "
+			],
+			[
+				"expe",
+				"experiments"
 			],
 			[
 				"coupon-app",
@@ -22,10 +38,6 @@
 			[
 				"button-bor",
 				"button-border-width"
-			],
-			[
-				"box-",
-				"box-shadow: "
 			],
 			[
 				"butto",
@@ -155,11 +167,75 @@
 	},
 	"buffers":
 	[
+		{
+			"file": "app/index.html",
+			"settings":
+			{
+				"buffer_size": 2125,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "app/styles/components/_intro.scss",
+			"settings":
+			{
+				"buffer_size": 1369,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "app/styles/core/_skin.scss",
+			"settings":
+			{
+				"buffer_size": 276,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "app/styles/style.scss",
+			"settings":
+			{
+				"buffer_size": 1137,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "app/styles/core/_layout.scss",
+			"settings":
+			{
+				"buffer_size": 51,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "app/styles/modules/_variables.scss",
+			"settings":
+			{
+				"buffer_size": 1437,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "app/styles/modules/_breakpoints.scss",
+			"settings":
+			{
+				"buffer_size": 389,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "app/styles/modules/_mixins-common.scss",
+			"settings":
+			{
+				"buffer_size": 996,
+				"line_ending": "Unix"
+			}
+		}
 	],
 	"build_system": "",
 	"command_palette":
 	{
-		"height": 227.0,
+		"height": 187.0,
 		"selected_items":
 		[
 			[
@@ -244,10 +320,36 @@
 	},
 	"expanded_folders":
 	[
-		"/Users/igal_steklov/Projects-Igal/WeFuckingLoveFrontEnd/website-2015"
+		"/Users/igal_steklov/Projects-Igal/WeFuckingLoveFrontEnd/website-2015",
+		"/Users/igal_steklov/Projects-Igal/WeFuckingLoveFrontEnd/website-2015/app",
+		"/Users/igal_steklov/Projects-Igal/WeFuckingLoveFrontEnd/website-2015/app/styles",
+		"/Users/igal_steklov/Projects-Igal/WeFuckingLoveFrontEnd/website-2015/app/styles/modules"
 	],
 	"file_history":
 	[
+		"/Users/igal_steklov/Projects-Igal/WeFuckingLoveFrontEnd/website-2015/Gruntfile.js",
+		"/Users/igal_steklov/Projects-Igal/WeFuckingLoveFrontEnd/website-2015/Gemfile.lock",
+		"/Users/igal_steklov/Projects-Igal/WeFuckingLoveFrontEnd/website-2015/Gemfile",
+		"/Users/igal_steklov/Projects-Igal/WeFuckingLoveFrontEnd/website-2015/app/styles/core/_common.scss",
+		"/Users/igal_steklov/Projects-Igal/WeFuckingLoveFrontEnd/website-2015/app/bower_components/jquery/src/core.js",
+		"/Users/igal_steklov/Projects-Igal/WeFuckingLoveFrontEnd/website-2015/app/bower_components/jquery/src/callbacks.js",
+		"/Users/igal_steklov/Projects-Igal/WeFuckingLoveFrontEnd/website-2015/app/styles/components/_intro.scss",
+		"/Users/igal_steklov/Projects-Igal/WeFuckingLoveFrontEnd/website-2015/app/index.html",
+		"/Users/igal_steklov/Projects-Igal/WeFuckingLoveFrontEnd/website-2015/app/styles/core/_skin.scss",
+		"/Users/igal_steklov/Projects-Igal/WeFuckingLoveFrontEnd/website-2015/.gitignore",
+		"/Users/igal_steklov/Projects-Igal/WeFuckingLoveFrontEnd/website-2015/app/bower_components/jquery/src/intro.js",
+		"/Users/igal_steklov/Projects-Igal/WeFuckingLoveFrontEnd/website-2015/app/styles/modules/_mixins-common.scss",
+		"/Users/igal_steklov/Projects-Igal/WeFuckingLoveFrontEnd/website-2015/app/styles/modules/_mixins-experiments.scss",
+		"/Users/igal_steklov/Projects-Igal/WeFuckingLoveFrontEnd/website-2015/app/styles/modules/_mixins-layout.scss",
+		"/Users/igal_steklov/Projects-Igal/WeFuckingLoveFrontEnd/website-2015/app/styles/modules/_mixins-spacing.scss",
+		"/Users/igal_steklov/Projects-Igal/WeFuckingLoveFrontEnd/website-2015/app/styles/modules/_mixins.scss",
+		"/Users/igal_steklov/Projects-Igal/WeFuckingLoveFrontEnd/website-2015/package.json",
+		"/Users/igal_steklov/Projects-Igal/WeFuckingLoveFrontEnd/website-2015/app/bower_components/jquery/src/selector-sizzle.js",
+		"/Users/igal_steklov/Projects-Igal/WeFuckingLoveFrontEnd/website-2015/app/styles/style.scss",
+		"/Users/igal_steklov/Projects-Igal/WeFuckingLoveFrontEnd/website-2015/app/bower_components/jquery/src/ajax.js",
+		"/Users/igal_steklov/Projects-Igal/WeFuckingLoveFrontEnd/website-2015/app/bower_components/jquery/src/effects/animatedSelector.js",
+		"/Users/igal_steklov/Projects-Igal/WeFuckingLoveFrontEnd/website-2015/app/styles/core/_layout.scss",
+		"/Users/igal_steklov/Projects-Igal/WeFuckingLoveFrontEnd/website-2015/app/styles/main.scss",
 		"/Users/igal_steklov/Projects/wix-ecommerce-style/app/styles/modules/_mixins-layout.scss",
 		"/Users/igal_steklov/Projects/wix-ecommerce-style/app/styles/modules/_mixins-experiments.scss",
 		"/Users/igal_steklov/Projects/wix-ecommerce-style/app/styles/modules/_mixins-common.scss",
@@ -352,40 +454,18 @@
 		"/Users/igal_steklov/Projects/wix-ecommerce-cart/app/scripts/locale/cart/messages_es.json",
 		"/Users/igal_steklov/Projects/wix-ecommerce-cart/replace.conf.js",
 		"/Users/igal_steklov/Projects/wix-ecommerce-cart/test/mock/data/cartData.default.json",
-		"/Users/igal_steklov/Projects/wix-ecommerce-cart/test/spec/services/cartData.spec.js",
-		"/Users/igal_steklov/Projects/wix-ecommerce-cart/test/spec/mock/cartDataMock.js",
-		"/Users/igal_steklov/Projects/wix-ecommerce-cart/app/scripts/services/cartData.js",
-		"/Users/igal_steklov/Projects/wix-ecommerce-cart/app/bower_components/modernizr/feature-detects/window-framed.js",
-		"/Users/igal_steklov/Projects/wix-ecommerce-cart/app/bower_components/angular-i18n/angular-locale_fr-re.js",
-		"/Users/igal_steklov/Projects/wix-ecommerce-cart/app/bower_components/wix-ecommerce-common-storefront/app/scripts/services/productApi.js",
-		"/Users/igal_steklov/Projects/wix-ecommerce-cart/app/bower_components/modernizr/feature-detects/dataview-api.js",
-		"/Users/igal_steklov/Projects/wix-ecommerce-cart/app/bower_components/modernizr/feature-detects/event-deviceorientation-motion.js",
-		"/Users/igal_steklov/Projects/wix-ecommerce-cart/test/mock/interceptors/NodeInterceptorManager.js",
-		"/Users/igal_steklov/Projects/wix-ecommerce-cart/app/bower_components/modernizr/feature-detects/elem-details.js",
-		"/Users/igal_steklov/Projects/wix-ecommerce-cart/app/bower_components/modernizr/feature-detects/elem-datalist.js",
-		"/Users/igal_steklov/Projects/wix-ecommerce-cart/app/bower_components/modernizr/media/Modernizr 2 Logo.svg",
-		"/Users/igal_steklov/Projects/wix-ecommerce-cart/app/bower_components/modernizr/media/Modernizr 2 Logo.eps",
-		"/Users/igal_steklov/Projects/wix-ecommerce-cart/app/bower_components/modernizr/media/Modernizr 2 Logo.ai",
-		"/Users/igal_steklov/Projects/wix-ecommerce-cart/app/bower_components/modernizr/feature-detects/img-apng.js",
-		"/Users/igal_steklov/Projects/wix-ecommerce-cart/app/bower_components/modernizr/feature-detects/getusermedia.js",
-		"/Users/igal_steklov/Projects/wix-ecommerce-cart/test/mock/wix/wix-sdk-utils-media.js",
-		"/Users/igal_steklov/Projects/wix-ecommerce-cart/app/bower_components/modernizr/feature-detects/css-mediaqueries.js",
-		"/Users/igal_steklov/Projects/wix-ecommerce-cart/app/scripts/controllers/cartCtrl.js",
-		"/Users/igal_steklov/Projects/wix-ecommerce-cart/ecommerce-cart.sublime-project",
-		"/Users/igal_steklov/Projects/wix-ecommerce-cart/node_modules/wix-gruntfile/karma.conf.js",
-		"/Users/igal_steklov/Projects/wix-ecommerce-cart/karma.conf.js",
-		"/Users/igal_steklov/Projects/wix-ecommerce-cart/node_modules/karma/config.tpl.coffee",
-		"/Users/igal_steklov/Projects/wix-ecommerce-cart/node_modules/karma/karma-completion.sh"
+		"/Users/igal_steklov/Projects/wix-ecommerce-cart/test/spec/services/cartData.spec.js"
 	],
 	"find":
 	{
-		"height": 29.0
+		"height": 58.0
 	},
 	"find_in_files":
 	{
 		"height": 93.0,
 		"where_history":
 		[
+			"<open files>",
 			"",
 			"subtotal",
 			""
@@ -396,6 +476,26 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"	\n",
+			"only ",
+			"\"",
+			"\",",
+			"'",
+			"compass",
+			"require",
+			"$intro-",
+			"%titles",
+			"<span>",
+			"	// ",
+			" !default",
+			"bower_com",
+			"sass",
+			"sass:",
+			"  ",
+			"compass",
+			"sass",
+			"sass:",
+			"  ",
 			"$experiment",
 			"splited",
 			"name-value",
@@ -503,27 +603,7 @@
 			".continue-shopping",
 			"paypa",
 			"butt",
-			"cartDataChanged",
-			"${enableMocks}",
-			"=\"init",
-			"init",
-			"cartDataChanged",
-			"cartda",
-			"Coupon",
-			"appliedCoupon",
-			"DUMMY_STORE_ID",
-			"icons",
-			"toBeDisplayed",
-			"notification",
-			"connect:",
-			"connect",
-			"connect:test",
-			"build",
-			".css",
-			"vertical-center",
-			"partials",
-			"getCartItemsCountUrl",
-			"update"
+			"cartDataChanged"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -531,6 +611,7 @@
 		"regex": false,
 		"replace_history":
 		[
+			"	",
 			"$tpa-color-23",
 			"$tpa-color-18",
 			"subtotal",
@@ -545,8 +626,249 @@
 	"groups":
 	[
 		{
+			"selected": 1,
 			"sheets":
 			[
+				{
+					"buffer": 0,
+					"file": "app/index.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2125,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1052,
+								1052
+							]
+						],
+						"settings":
+						{
+							"encoding_helper_encoding": "UTF-8",
+							"history_list_is_closing": true,
+							"syntax": "Packages/HTML/HTML.tmLanguage"
+						},
+						"translation.x": -0.0,
+						"translation.y": 375.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 6,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "app/styles/components/_intro.scss",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1369,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								640,
+								640
+							]
+						],
+						"settings":
+						{
+							"encoding_helper_encoding": "UTF-8",
+							"history_list_is_closing": true,
+							"syntax": "Packages/Sass/Syntaxes/Sass.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "app/styles/core/_skin.scss",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 276,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								274,
+								274
+							]
+						],
+						"settings":
+						{
+							"encoding_helper_encoding": "UTF-8",
+							"syntax": "Packages/Sass/Syntaxes/Sass.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				}
+			]
+		},
+		{
+			"selected": 2,
+			"sheets":
+			[
+				{
+					"buffer": 3,
+					"file": "app/styles/style.scss",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1137,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1137,
+								1137
+							]
+						],
+						"settings":
+						{
+							"encoding_helper_encoding": "UTF-8",
+							"syntax": "Packages/Sass/Syntaxes/Sass.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "app/styles/core/_layout.scss",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 51,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								12,
+								12
+							]
+						],
+						"settings":
+						{
+							"encoding_helper_encoding": "UTF-8",
+							"syntax": "Packages/Sass/Syntaxes/Sass.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 7,
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "app/styles/modules/_variables.scss",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1437,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1246,
+								1246
+							]
+						],
+						"settings":
+						{
+							"encoding_helper_encoding": "UTF-8",
+							"syntax": "Packages/Sass/Syntaxes/Sass.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 6,
+					"file": "app/styles/modules/_breakpoints.scss",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 389,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								389,
+								389
+							]
+						],
+						"settings":
+						{
+							"encoding_helper_encoding": "UTF-8",
+							"syntax": "Packages/Sass/Syntaxes/Sass.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 4,
+					"type": "text"
+				},
+				{
+					"buffer": 7,
+					"file": "app/styles/modules/_mixins-common.scss",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 996,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								57,
+								57
+							]
+						],
+						"settings":
+						{
+							"encoding_helper_encoding": "UTF-8",
+							"syntax": "Packages/Sass/Syntaxes/Sass.tmLanguage"
+						},
+						"translation.x": 10.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 5,
+					"type": "text"
+				}
 			]
 		}
 	],
@@ -567,11 +889,18 @@
 				0,
 				1,
 				1
+			],
+			[
+				1,
+				0,
+				2,
+				1
 			]
 		],
 		"cols":
 		[
 			0.0,
+			0.5,
 			1.0
 		],
 		"rows":
@@ -597,8 +926,44 @@
 		"selected_items":
 		[
 			[
+				"grunt",
+				"Gruntfile.js"
+			],
+			[
+				"gem",
+				"Gemfile.lock"
+			],
+			[
+				"comm",
+				"app/styles/core/_common.scss"
+			],
+			[
+				"common",
+				"app/styles/core/_common.scss"
+			],
+			[
+				"into",
+				"app/styles/components/_intro.scss"
+			],
+			[
+				"skin",
+				"app/styles/core/_skin.scss"
+			],
+			[
 				"vari",
 				"app/styles/modules/_variables.scss"
+			],
+			[
+				"layou",
+				"app/styles/core/_layout.scss"
+			],
+			[
+				"ss",
+				"app/styles/style.scss"
+			],
+			[
+				"in",
+				"app/index.html"
 			],
 			[
 				"previ",
@@ -631,10 +996,6 @@
 			[
 				"glyp",
 				"app/bower_components/wix-ecommerce-style/app/styles/core/_glyphicons.scss"
-			],
-			[
-				"common",
-				"app/bower_components/wix-ecommerce-common-storefront/app/styles/common.scss"
 			],
 			[
 				"cartwidgetplaceholder",
@@ -703,14 +1064,6 @@
 			[
 				"cart",
 				"app/views/cart.html"
-			],
-			[
-				"skin",
-				"app/bower_components/wix-ecommerce-common-storefront/app/styles/core/_skin.scss"
-			],
-			[
-				"grunt",
-				"Gruntfile.js"
 			],
 			[
 				"mess",
@@ -988,6 +1341,10 @@
 		"height": 500.0,
 		"selected_items":
 		[
+			[
+				"checl",
+				"~/Projects/wix-ecommerce-checkout/ecommerce-checkout.sublime-project"
+			],
 			[
 				"common",
 				"~/Projects/wix-ecommerce-common-storefront/ecommerce-common-storefront.sublime-project"

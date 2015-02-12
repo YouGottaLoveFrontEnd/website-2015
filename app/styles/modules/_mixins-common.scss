@@ -23,5 +23,5 @@
 }
 
 @mixin brand-gradient($direction: bottom) {
-	@include background-image(linear-gradient(to $direction, $color-blue 3%, $color-green 40%, $color-green));
+	@include background-image(linear-gradient(to $direction, $color-blue, $color-green, $color-green));
 }

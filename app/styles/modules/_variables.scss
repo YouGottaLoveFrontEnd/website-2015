@@ -9,12 +9,15 @@ $state-factor: 10%;
 $color-blue: #1105e7;
 $color-green: #00d09d;
 $color-white: #ffffff;
-$color-beige: #1a1a1a;
 $color-black: #000000;
 
 // Font
 // ----------------------------------------------------------------------
 $font-family: Futura, Arial;
+
+// Misc
+// ----------------------------------------------------------------------
+$border-width: 10px;
 
 // ======================================================================
 // =| Core |=============================================================
@@ -23,6 +26,7 @@ $font-family: Futura, Arial;
 // Skin
 // ----------------------------------------------------------------------
 $skin-font-family: $font-family;
+$skin-background: lighten($color-black, 5%);
 
 // ======================================================================
 // =| Component Configuration |==========================================
@@ -37,3 +41,15 @@ $intro-logo-padding: 5%;
 $intro-title-offset: -5%;
 $intro-title-datetime-font-size: 80%;
 $intro-title-subtitle-font-size: 40%;
+
+// Sections
+// ----------------------------------------------------------------------
+$section-margin-top: 20%;
+$section-margin-bottom: 5%;
+$section-background: $color-white;
+$section-color: $color-black;
+$section-border-color-a: $color-green;
+$section-border-color-b: darken($color-green, 5%);
+$section-brand-letter-color: $color-green;
+$section-brand-letter-font-size: 20rem;
+

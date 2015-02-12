@@ -40,7 +40,7 @@
 }
 
 .logo {
-	border: solid 10px;
+	border: solid $border-width;
 	line-height: $intro-logo-line-height;
 	font-size: $intro-logo-font-size;
 	text-align: left;
