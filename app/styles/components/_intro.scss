@@ -64,8 +64,9 @@
 		letter-spacing: -0.15em;	// controls the space we're reserving
 
 		&:after {
-			@include position(absolute, 0, nil, nil, 9%);
-			@include translateY(-63%);
+			@include position(absolute, 0, nil, nil, 0);
+			@include transform(translateY(-63%) scaleX(0.85));
+			letter-spacing: normal;
 			content: "___";
 			color: $color-white;
 		}
