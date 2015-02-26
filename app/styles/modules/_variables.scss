@@ -72,3 +72,21 @@ $button-border: solid 1px $color-black;
 $button-font-size: 1.2rem;
 $button-spacing-vertical: 0.75rem;
 $button-spacing-horizontal: 4rem;
+
+// Speakers
+// ----------------------------------------------------------------------
+$speaker-sizes: (
+	"mobile": 1,
+	"down to phablet": 2,
+	"desktop": 3
+);
+$speaker-horizontal-spacing: 10%;
+$speaker-vertical-spacing: 15%;
+$speaker-font-size: 1.2rem;
+$speaker-header-vertical-spacing: 2rem, 1.2rem;
+$speaker-header-inner-vertical-spacing: 0.3rem;
+$speaker-header-hr-spacing: 0.4rem;
+$speaker-header-hr-width: 30%;
+$speaker-header-hr-height: 1px;
+$speaker-header-hr-background: $color-black;
+$speaker-name-font-size: 1.2rem;

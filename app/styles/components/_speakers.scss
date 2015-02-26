@@ -1,0 +1,70 @@
+// ======================================================================
+// =| Handle Component Sizes |===========================================
+// ======================================================================
+
+@mixin speaker-size($items-per-row, $margin: 0) {
+	@include margin-horizontal(if($items-per-row == 1, 0, $margin / 2));
+	width: if($items-per-row == 1, 100%, (100% / $items-per-row) - $margin);
+}
+
+@each $breakpoint, $items-per-row in $speaker-sizes {
+	@include respond-to($breakpoint) {
+		@if ($items-per-row > 1) {
+			.speakers {
+				@include margin-horizontal($speaker-horizontal-spacing / -2);
+			}
+		}
+
+		.speaker {
+			@include speaker-size($items-per-row, $speaker-horizontal-spacing);
+		}
+	}
+}
+
+
+// ======================================================================
+// =| Component |========================================================
+// ======================================================================
+
+.speakers {
+	font-size: 0;
+}
+
+.speaker {
+	@include margin-vertical($speaker-vertical-spacing);
+	display: inline-block;
+	text-align: center;
+	vertical-align: top;
+	font-size: $speaker-font-size;
+
+	@include respond-to("down to tablet") {
+		font-size: $speaker-font-size * 0.6;
+	}
+}
+
+.speaker-image {
+	width: 100%;
+	border-radius: 50%;
+}
+
+.speaker-header {
+	@include margin-vertical(nth($speaker-header-vertical-spacing, 1), nth($speaker-header-vertical-spacing, 2));
+	padding-bottom: $speaker-header-hr-spacing;
+	position: relative;
+
+	&:after {
+		@include pseudo-element($speaker-header-hr-width, $speaker-header-hr-height);
+		@include position(absolute, nil, nil, 0, 50%);
+		@include translateX(-50%);
+		background: $speaker-header-hr-background;
+	}
+
+	> * {
+		@include margin-vertical($speaker-header-inner-vertical-spacing);
+	}
+}
+
+.speaker-name {
+	text-transform: uppercase;
+	font-size: $speaker-name-font-size;
+}

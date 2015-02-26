@@ -61,8 +61,8 @@
 // @param $spacing-bottom - (optional, default $spacing-top) spacing from the bottom in px
 //
 @mixin margin-vertical($spacing-top: $spacing, $spacing-bottom: $spacing-top) {
-	margin-top: round(size($spacing-top));
-	margin-bottom: round(size($spacing-bottom));
+	margin-top: size($spacing-top);
+	margin-bottom: size($spacing-bottom);
 }
 
 ////
@@ -71,8 +71,8 @@
 // @param $spacing-right - (optional, default $spacing-left) spacing from the right in px
 //
 @mixin margin-horizontal($spacing-left: $spacing, $spacing-right: $spacing-left) {
-	margin-left: round(size($spacing-left));
-	margin-right: round(size($spacing-right));
+	margin-left: size($spacing-left);
+	margin-right: size($spacing-right);
 }
 
 ////
@@ -81,8 +81,8 @@
 // @param $spacing-bottom - (optional, default $spacing-top) spacing from the bottom in px
 //
 @mixin padding-vertical($spacing-top: $spacing, $spacing-bottom: $spacing-top) {
-	padding-top: round(size($spacing-top));
-	padding-bottom: round(size($spacing-bottom));
+	padding-top: size($spacing-top);
+	padding-bottom: size($spacing-bottom);
 }
 
 ////
@@ -91,6 +91,6 @@
 // @param $spacing-right - (optional, default $spacing-left) spacing from the right in px
 //
 @mixin padding-horizontal($spacing-left: $spacing, $spacing-right: $spacing-left) {
-	padding-left: round(size($spacing-left));
-	padding-right: round(size($spacing-right));
+	padding-left: size($spacing-left);
+	padding-right: size($spacing-right);
 }
