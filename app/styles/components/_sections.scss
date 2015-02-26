@@ -8,6 +8,8 @@
 	left: -5%;
 	background: $section-background;
 	color: $section-color;
+	font-size: $section-font-size;
+	line-height: $section-line-height;
 	border: solid $border-width $section-border-color-a;
 	border-image: linear-gradient(to right, $section-border-color-a, $section-border-color-b) 1% stretch;
 	padding: 7%;
@@ -46,10 +48,42 @@ body {
 	counter-reset: section;
 }
 
+.section-header {
+	text-transform: uppercase;
+	position: relative;
+	padding-bottom: $section-header-hr-height;
+	margin-bottom: $section-inner-spacing;
+	line-height: normal;
+
+	&:after {
+		@include position(absolute, nil, nil, 0, 0);
+		@include pseudo-element($section-header-hr-width, $section-header-hr-height);
+		background: $section-header-hr-background;
+	}
+
+	> * {
+		margin-bottom: $section-header-inner-spacings;
+	}
+}
+
 .section-title {
+	position: relative;
+	font-size: $section-title-font-size;
 
 	&:before {
+		@include translateX(-115%);
+		@include position(absolute, -50%);
+
 		counter-increment: section;
-		content: "0" counter(section);
+		content: "0" counter(section) " /";
+		font-family: 'Lato', sans-serif;
+		font-weight: 100;
+		font-style: italic;
+		font-size: 1rem;
 	}
+}
+
+.section-subtitle {
+	font-size: $section-subtitle-font-size;
+	margin-left: -3px;
 }

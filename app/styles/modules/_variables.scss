@@ -48,8 +48,16 @@ $section-margin-top: 20%;
 $section-margin-bottom: 5%;
 $section-background: $color-white;
 $section-color: $color-black;
+$section-font-size: 1.2rem;
+$section-line-height: 1.5;
 $section-border-color-a: $color-green;
 $section-border-color-b: darken($color-green, 5%);
 $section-brand-letter-color: $color-green;
 $section-brand-letter-font-size: 20rem;
-
+$section-header-hr-width: 100px;
+$section-header-hr-height: 3px;
+$section-header-hr-background: $color-black;;
+$section-header-inner-spacings: 4%;
+$section-title-font-size: 0.6rem;
+$section-subtitle-font-size: 3.5rem;
+$section-inner-spacing: 10%;
