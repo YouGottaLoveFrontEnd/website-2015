@@ -61,3 +61,14 @@ $section-header-inner-spacings: 4%;
 $section-title-font-size: 0.6rem;
 $section-subtitle-font-size: 3.5rem;
 $section-inner-spacing: 10%;
+
+// Buttons
+// ----------------------------------------------------------------------
+$button-background: transparent;
+$button-background_hover: $color-black;
+$button-color: $color-black;
+$button-color_hover: $color-white;
+$button-border: solid 1px $color-black;
+$button-font-size: 1.2rem;
+$button-spacing-vertical: 0.75rem;
+$button-spacing-horizontal: 4rem;

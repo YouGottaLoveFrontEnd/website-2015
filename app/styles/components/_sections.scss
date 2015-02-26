@@ -52,7 +52,6 @@ body {
 	text-transform: uppercase;
 	position: relative;
 	padding-bottom: $section-header-hr-height;
-	margin-bottom: $section-inner-spacing;
 	line-height: normal;
 
 	&:after {
@@ -86,4 +85,10 @@ body {
 .section-subtitle {
 	font-size: $section-subtitle-font-size;
 	margin-left: -3px;
+}
+
+.has-section-spacing {
+	@at-root & + & {
+		margin-top: $section-inner-spacing;
+	}
 }

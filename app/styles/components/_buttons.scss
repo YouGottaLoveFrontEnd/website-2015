@@ -1,0 +1,36 @@
+.button {
+	background: $button-background;
+	color: $button-color;
+	border: $button-border;
+	font-size: $button-font-size;
+	text-transform: uppercase;
+	padding: $button-spacing-vertical $button-spacing-horizontal;
+	position: relative;
+	z-index: 0;
+
+	// handle anchor tag
+	@at-root a#{&} {
+		display: inline-block;
+		text-decoration: none;
+	}
+
+	&,
+	&:after {
+		@include transition(all 0.3s);
+	}
+
+	&:after {
+		@include pseudo-element(0, 100%);
+		@include position(absolute, 0, nil, nil, 0);
+		z-index: -1;
+		background: $button-background_hover;
+	}
+
+	&:hover {
+		color: $button-color_hover;
+
+		&:after {
+			width: 100%;
+		}
+	}
+}
