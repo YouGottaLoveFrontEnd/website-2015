@@ -32,6 +32,18 @@ $skin-background: lighten($color-black, 5%);
 // =| Component Configuration |==========================================
 // ======================================================================
 
+// Nav
+// ----------------------------------------------------------------------
+$nav-offset: 100px;
+$nav-link-color: $color-white;
+$nav-link-font-size: 0.6rem;
+$nav-link-vertical-spacing: 0.5rem;
+$nav-bullet-size: $border-width;
+$nav-bullet-offset: $nav-bullet-size * -1.5;
+$nav-bullet-opacity: 0.5;
+$nav-bullet-opacity_active: 1;
+$nav-bullet-background: $color-white;
+
 // Intro
 // ----------------------------------------------------------------------
 $intro-font-size: 4rem;

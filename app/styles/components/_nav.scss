@@ -1,0 +1,43 @@
+.nav {
+	@include position(fixed, 50%, $nav-offset);
+	@include translateY(-50%);
+	z-index: 100;
+	text-align: right;
+
+	@include respond-to("up to tablet") {
+		display: none;
+	}
+}
+
+%has-nav-bullet {
+	position: relative;
+
+	&:before {
+		@include transition(all 0.3s);
+		@include pseudo-element($nav-bullet-size);
+		@include position(absolute, 50%, $nav-bullet-offset);
+		@include translate(100%, -50%);
+		background: $nav-bullet-background;
+		opacity: $nav-bullet-opacity;
+	}
+
+	&.active:before {
+		width: $nav-offset;
+	}
+
+	&.active:before,
+	&:hover:before {
+		opacity: $nav-bullet-opacity_active;
+	}
+}
+
+.nav-link {
+	@extend %has-nav-bullet;
+	@include padding-vertical($nav-link-vertical-spacing);
+	cursor: pointer;
+	display: block;
+	text-transform: uppercase;
+	color: $nav-link-color;
+	text-decoration: none;
+	font-size: $nav-link-font-size;
+}
