@@ -17,7 +17,7 @@ $font-family: Futura, Arial;
 
 // Misc
 // ----------------------------------------------------------------------
-$border-width: 10px;
+$border-width: 7px;
 
 // ======================================================================
 // =| Core |=============================================================
@@ -46,13 +46,17 @@ $nav-bullet-background: $color-white;
 
 // Intro
 // ----------------------------------------------------------------------
-$intro-font-size: 4rem;
+$intro-font-size: 3.2rem;
 $intro-logo-font-size: 100%;
 $intro-logo-line-height: 1.25;
-$intro-logo-padding: 5%;
-$intro-title-offset: -5%;
-$intro-title-datetime-font-size: 80%;
-$intro-title-subtitle-font-size: 40%;
+$intro-logo-padding: 3%;
+$intro-title-offset: -10%;
+$intro-title-datetime-font-size: 60%;
+$intro-title-subtitle-font-size: 35%;
+$intro-title-datetime-letter-spacing: 3px;
+$intro-title-subtitle-letter-spacing: 1px;
+
+
 
 // Sections
 // ----------------------------------------------------------------------

@@ -36,6 +36,7 @@
 		@include translate(-50%, 100%);
 		bottom: $intro-title-offset;
 		font-size: $intro-title-datetime-font-size;
+        letter-spacing: $intro-title-datetime-letter-spacing;
 	}
 }
 

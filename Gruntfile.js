@@ -159,7 +159,7 @@ module.exports = function (grunt) {
 				javascriptsDir: '<%= config.app %>/scripts',
 				fontsDir: '<%= config.app %>/styles/fonts',
 				generatedImagesDir: '.tmp/images/generated',
-				importPath: '<%= config.app %>/bower_components',
+				importPath: 'bower_components',
 				httpImagesPath: '../images',
 				httpGeneratedImagesPath: '../images/generated',
 				httpFontsPath: 'fonts',
