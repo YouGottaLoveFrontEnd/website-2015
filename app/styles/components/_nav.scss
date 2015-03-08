@@ -27,6 +27,8 @@
 	&.active:before,
 	&:hover:before {
 		opacity: $nav-bullet-opacity_active;
+        width: $nav-offset;
+        
 	}
 }
 
@@ -39,4 +41,5 @@
 	color: $nav-link-color;
 	text-decoration: none;
 	font-size: $nav-link-font-size;
+
 }
