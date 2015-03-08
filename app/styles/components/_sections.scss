@@ -5,7 +5,6 @@
 	width: 65%;
 	max-width: 1200px;
 	position: relative;
-	left: -10%;
 	background: $section-background;
 	color: $section-color;
 	font-size: $section-font-size;
@@ -21,7 +20,7 @@
     
 	// Section Illustration: Big letter
 	&:before {
-		@include position(absolute, 0, 0);
+		@include position(absolute);
 		@include translate(46%, -54%);
 		font-size: $section-brand-letter-font-size;
 		color: $section-brand-letter-color;
@@ -92,4 +91,22 @@ body {
 	@at-root & + & {
 		margin-top: $section-inner-spacing;
 	}
+}
+
+.section:nth-child(even){
+	right: 0%;
+}
+
+.section:nth-child(odd){
+	left: -10%;
+}
+
+.section:nth-child(even):before{
+	left: 0;
+    top:-30px;
+}
+
+.section:nth-child(odd):before{
+	right: 0;
+    top:0;
 }
