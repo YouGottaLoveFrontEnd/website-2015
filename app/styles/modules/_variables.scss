@@ -34,7 +34,7 @@ $skin-background: lighten($color-black, 5%);
 
 // Nav
 // ----------------------------------------------------------------------
-$nav-offset: 100px;
+$nav-offset: 80px;
 $nav-link-color: $color-white;
 $nav-link-font-size: 0.6rem;
 $nav-link-vertical-spacing: 0.5rem;
@@ -50,11 +50,11 @@ $intro-font-size: 3.2rem;
 $intro-logo-font-size: 100%;
 $intro-logo-line-height: 1.25;
 $intro-logo-padding: 3%;
-$intro-title-offset: -10%;
-$intro-title-datetime-font-size: 60%;
-$intro-title-subtitle-font-size: 35%;
-$intro-title-datetime-letter-spacing: 3px;
-$intro-title-subtitle-letter-spacing: 1px;
+$intro-title-offset: -7%;
+$intro-title-datetime-font-size: 25%;
+$intro-title-subtitle-font-size: 37%;
+$intro-title-datetime-letter-spacing: 4.8px;
+$intro-title-subtitle-letter-spacing: 3.2px;
 
 
 
@@ -105,4 +105,4 @@ $speaker-header-hr-spacing: 0.4rem;
 $speaker-header-hr-width: 30%;
 $speaker-header-hr-height: 1px;
 $speaker-header-hr-background: $color-black;
-$speaker-name-font-size: 1.2rem;
+$speaker-name-font-size: 1rem;
