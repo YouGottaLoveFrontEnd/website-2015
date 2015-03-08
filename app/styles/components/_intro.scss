@@ -23,9 +23,8 @@
 		@include translate(-50%, -100%);
 		top: $intro-title-offset;
 		font-size: $intro-title-subtitle-font-size;
-		font-style: italic;
-		letter-spacing: 2px;
-
+		letter-spacing: $intro-title-subtitle-letter-spacing;
+        text-transform: capitalize;
 		@include respond-to("mobile") {
 			font-size: $intro-title-subtitle-font-size * 0.9;
 		}
@@ -37,6 +36,8 @@
 		bottom: $intro-title-offset;
 		font-size: $intro-title-datetime-font-size;
         letter-spacing: $intro-title-datetime-letter-spacing;
+        text-transform: capitalize;
+
 	}
 }
 
