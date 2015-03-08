@@ -64,18 +64,18 @@ $section-margin-top: 20%;
 $section-margin-bottom: 5%;
 $section-background: $color-white;
 $section-color: $color-black;
-$section-font-size: 1.2rem;
-$section-line-height: 1.5;
+$section-font-size: 0.9rem;
+$section-line-height: 2;
 $section-border-color-a: $color-green;
 $section-border-color-b: darken($color-green, 5%);
 $section-brand-letter-color: $color-green;
-$section-brand-letter-font-size: 20rem;
+$section-brand-letter-font-size: 16rem;
 $section-header-hr-width: 100px;
-$section-header-hr-height: 3px;
+$section-header-hr-height: 2px;
 $section-header-hr-background: $color-black;;
 $section-header-inner-spacings: 4%;
 $section-title-font-size: 0.6rem;
-$section-subtitle-font-size: 3.5rem;
+$section-subtitle-font-size: 2.7rem;
 $section-inner-spacing: 10%;
 
 // Buttons
@@ -85,9 +85,9 @@ $button-background_hover: $color-black;
 $button-color: $color-black;
 $button-color_hover: $color-white;
 $button-border: solid 1px $color-black;
-$button-font-size: 1.2rem;
-$button-spacing-vertical: 0.75rem;
-$button-spacing-horizontal: 4rem;
+$button-font-size: 0.8rem;
+$button-spacing-vertical: 0.5rem;
+$button-spacing-horizontal: 3rem;
 
 // Speakers
 // ----------------------------------------------------------------------
