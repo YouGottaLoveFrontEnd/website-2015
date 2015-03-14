@@ -26,6 +26,10 @@
 		color: $section-brand-letter-color;
 	}
 
+    &:first-child {
+        margin-top: 50%;
+    }
+
 	$brand-letters: "W", "F", "L", "F";
 	@for $i from 1 through length($brand-letters) {
 		&:nth-of-type(#{$i}n):before {

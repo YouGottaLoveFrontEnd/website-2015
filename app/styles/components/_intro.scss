@@ -1,6 +1,7 @@
 .intro {
 	@include brand-gradient();
 	height: 100%;
+    min-height: 800px;
 	position: relative;
 	color: $color-white;
 	text-align: center;
@@ -23,8 +24,10 @@
 		@include translate(-50%, -100%);
 		top: $intro-title-offset;
 		font-size: $intro-title-subtitle-font-size;
-		letter-spacing: $intro-title-subtitle-letter-spacing;
-        text-transform: capitalize;
+		font-style: italic;
+		letter-spacing: 2px;
+        opacity: 0;
+
 		@include respond-to("mobile") {
 			font-size: $intro-title-subtitle-font-size * 0.9;
 		}
@@ -35,9 +38,7 @@
 		@include translate(-50%, 100%);
 		bottom: $intro-title-offset;
 		font-size: $intro-title-datetime-font-size;
-        letter-spacing: $intro-title-datetime-letter-spacing;
-        text-transform: capitalize;
-
+        opacity: 0;
 	}
 }
 
@@ -61,17 +62,41 @@
 		white-space: nowrap;
 	}
 
-	.is-censored {
-		color: transparent;
-		position: relative;
-		letter-spacing: -0.15em;	// controls the space we're reserving
+    .letter {
+        display: inline-block;
+        opacity: 0;
+    }
 
-		&:after {
+    .hide-letter {
+		color: transparent;
+    }
+
+    .will-be-censored {
+        &:after {
+            transition: color 100ms;
+        }
+    }
+
+	.is-censored {
+		position: relative;
+//		letter-spacing: -0.15em;	// controls the space we're reserving
+
+        &.last-of-censored:after {
+            content: "_";
+        }
+
+        &:after {
 			@include position(absolute, 0, nil, nil, 0);
 			@include transform(translateY(-63%) scaleX(0.85));
 			letter-spacing: normal;
 			content: "___";
 			color: $color-white;
-		}
-	}
+        }
+    }
+}
+
+.ready {
+    .logo .letter {
+        opacity: 1;
+    }
 }
