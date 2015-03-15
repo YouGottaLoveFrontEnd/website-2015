@@ -15,7 +15,7 @@ $(document).ready(function () {
   });
 
   stickyNavigationController.scrollTo(function (newpos) {
-    TweenMax.to(window, 0.5, {scrollTo: {y: newpos}});
+    TweenMax.to(window, 0.5, {scrollTo: {y: newpos-200}});
   });
 
   $(document).on("click", "a[href^=#]", function (e) {

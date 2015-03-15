@@ -1,16 +1,20 @@
 'use strict';
 
 var generatePath = function (element) {
+  var windowWidth = Math.max(document.documentElement.clientWidth, window.innerWidth || 0);
+  var windowHeight = Math.max(document.documentElement.clientHeight, window.innerHeight || 0);
+
   var points = [],
-    lastPoint = {x: element.offsetLeft, y: element.offsetTop},
+      offset = $(element).offset(),
+      endPoint = {x: offset.left, y: offset.top},
     random = function (min, max) {
       return Math.random() * (max - min) + min;
     };
 
   for (var i = 0; i < 1; i++) {
     points.push({
-      x: random(-(lastPoint.x + 100), window.outerWidth - lastPoint.x + 100),
-      y: random(-(lastPoint.y + 400), -(lastPoint.y + 300))
+      x: 0,
+      y: random(-endPoint.y, windowHeight - endPoint.y)
     });
   }
 
