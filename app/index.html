@@ -22,6 +22,16 @@
 		<p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
 	<![endif]-->
 
+    <div class="preloader">
+        <div class="loader">
+            <span class="loader-step-1">W</span>
+            <span class="loader-step-2">F</span>
+            <span class="loader-step-3">L</span>
+            <span class="loader-step-4">F</span>
+            <span class="loader-step-5">E</span>
+        </div>
+    </div>
+
 	<nav class="nav">
 		<ul>
 			<li class="nav-item">
@@ -89,9 +99,8 @@
 		</div>
 	</header>
 
-    <!--<figure class="source-viewer"></figure>-->
     <pre class="source-viewer">
-        <code class="language-html"></code>
+        <code class="language-markup"></code>
     </pre>
 
 	<main>
@@ -192,13 +201,13 @@
 				<h2 class="section-title">Venue</h2>
 				<h3 class="section-subtitle">Getting Here</h3>
 			</header>
-      <div class="has-section-spacing">
-        <a href="http://www.cameri.co.il/en/" target="_blank">The Cameri Theatre of Tel Aviv</a>
-        <div class="map">
-          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6761.439105577142!2d34.78440727116403!3d32.07683322752109!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x61fa90f650d50f64!2sCameri+Theater!5e0!3m2!1sen!2s!4v1404114701887" frameborder="0"></iframe>
-        </div>
-        <a href="http://www.cameri.co.il/en/parking" target="_blank">Directions & Parking Lots</a>
-      </div>
+            <div class="has-section-spacing">
+                <a href="http://www.cameri.co.il/en/" target="_blank">The Cameri Theatre of Tel Aviv</a>
+                <div class="map">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6761.439105577142!2d34.78440727116403!3d32.07683322752109!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x61fa90f650d50f64!2sCameri+Theater!5e0!3m2!1sen!2s!4v1404114701887" frameborder="0"></iframe>
+                </div>
+                <a href="http://www.cameri.co.il/en/parking" target="_blank">Directions & Parking Lots</a>
+            </div>
 		</section>
 
 		<section id="registration" class="section">
@@ -220,6 +229,8 @@
 	</main>
 
     <script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/latest/TweenMax.min.js"></script>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/1.16.0/plugins/CSSPlugin.min.js"></script>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/1.16.0/plugins/CSSRulePlugin.min.js"></script>
     <script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/1.16.0/plugins/ScrollToPlugin.min.js"></script>
 
 	<!-- build:js(.) scripts/vendor.js -->
@@ -229,8 +240,6 @@
 		<!-- endbower -->
 	<!-- endbuild -->
 
-    <script src="scripts/vendor/animation.gsap.js"></script>
-    <script src="scripts/vendor/prism.min.js"></script>
 	<script src="//use.typekit.net/yve3oba.js"></script>
 	<script>try{Typekit.load();}catch(e){}</script>
 
@@ -246,9 +255,13 @@
 
 	<!-- build:js({app,.tmp}) scripts/main.js -->
 		<script src="scripts/main.js"></script>
-        <script src="scripts/logo.js"></script>
-        <script src="scripts/sourceViewer.js"></script>
-		<script src="scripts/stickyNavigation.js"></script>
+        <script src="scripts/components/logo.js"></script>
+        <script src="scripts/components/sourceViewer.js"></script>
+		<script src="scripts/components/stickyNavigation.js"></script>
+		<script src="scripts/components/sections.js"></script>
+
+        <script src="scripts/vendor/animation.gsap.js"></script>
+        <script src="scripts/vendor/prism.min.js" data-manual></script>
 	<!-- endbuild -->
 </body>
 </html>

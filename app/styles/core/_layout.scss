@@ -5,7 +5,11 @@ body {
 
 body {
 	margin: 0;
-    overflow-x: hidden;
+    overflow: hidden;
+
+    &.loaded {
+        overflow-y: scroll;
+    }
 }
 
 main {

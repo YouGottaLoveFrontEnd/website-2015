@@ -27,10 +27,10 @@
 	}
 
     &:first-child {
-        margin-top: 60%;
+        margin-top: 80%;
     }
 
-	$brand-letters: "W", "F", "L", "F";
+	$brand-letters: "W", "F", "L", "F", "E";
 	@for $i from 1 through length($brand-letters) {
 		&:nth-of-type(#{$i}n):before {
 			content: nth($brand-letters, $i);

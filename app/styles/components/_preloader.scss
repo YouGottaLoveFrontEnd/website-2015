@@ -1,0 +1,60 @@
+.preloader {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: #000;
+    z-index: 10000;
+}
+
+.loader {
+	@include brand-gradient();
+    @include transform(translate(-50%, -50%));
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    padding: 70px;
+    margin: auto;
+    border-radius: 50%;
+    
+    &:after {
+        @include transform(translate(-50%, 0));
+        content: 'Getting you there...';
+        position: absolute;
+        display: inline-block;
+        white-space: nowrap;
+        left: 50%;
+        bottom: -40px;
+        color: #FFF;
+        font-weight: 300;
+        text-transform: uppercase;
+    }
+
+    [class^='loader-step'] {
+        @include transform(translate(-50%, -50%));
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        opacity: 0;
+        color: #FFF;
+        font-size: 80px;
+    }
+
+	$brand-letters: "W", "F", "L", "F", "E";
+    $letter-show-time: 500ms;
+    $total-show-time: length($brand-letters) * $letter-show-time;
+	@for $i from 1 through length($brand-letters) {
+        .loader-step-#{$i}  {
+            animation: loader-step-animation #{$total-show-time} (#{$i * $letter-show-time}) infinite;
+        }
+    }
+}
+
+@keyframes loader-step-animation {
+    20% { opacity: 1; }
+    40% { opacity: 0; }
+    60% { opacity: 0; }
+    80% { opacity: 0; }
+    100% { opacity: 0; }
+}
