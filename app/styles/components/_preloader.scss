@@ -20,7 +20,7 @@
     
     &:after {
         @include transform(translate(-50%, 0));
-        content: 'Getting you there...';
+        content: 'Loading...';
         position: absolute;
         display: inline-block;
         white-space: nowrap;
@@ -29,6 +29,7 @@
         color: #FFF;
         font-weight: 300;
         text-transform: uppercase;
+        opacity: 0;
     }
 
     [class^='loader-step'] {

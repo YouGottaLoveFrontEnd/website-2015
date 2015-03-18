@@ -17,28 +17,12 @@
 		width: 88%;
 	}
 
-    
-	// Section Illustration: Big letter
-	&:before {
-		@include position(absolute);
-		@include translate(46%, -54%);
-		font-size: $section-brand-letter-font-size;
-		color: $section-brand-letter-color;
-	}
-
     &:first-child {
-        margin-top: 70%;
+        margin-top: 90%;
     }
 
-	$brand-letters: "W", "F", "L", "F", "E";
-	@for $i from 1 through length($brand-letters) {
-		&:nth-of-type(#{$i}n):before {
-			content: nth($brand-letters, $i);
-		}
-	}
-
 	// Section Illustration: Gradient box
-	&:after {
+	.section-illustration {
 		@include pseudo-element(70%, 450px);
 		@include brand-gradient(right);
 		@include position(absolute, nil, 0, 0);
