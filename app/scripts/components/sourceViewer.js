@@ -1,11 +1,11 @@
 'use strict';
 
 $(document).ready(function () {
-  $.ajax('/')
+  $.ajax(document.location.pathname)
     .then(function (html) {
       var $sourceElement = $('.source-viewer > code');
       $sourceElement.text(html);
-      Prism.highlightElement($sourceElement.get(0), true);
+      Prism.highlightElement($sourceElement.get(0), false);
     });
 
   var scenes = [],

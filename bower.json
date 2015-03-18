@@ -1,9 +1,6 @@
 {
   "name": "website-2015",
   "private": true,
-  "dependencies": {
-    "jquery": "~1.11.1",
-    "scrollmagic": "~2.0.0"
-  },
+  "dependencies": {},
   "devDependencies": {}
 }

@@ -6,7 +6,8 @@
 	<meta name="description" content="">
 	<meta name="robots" content="noindex, nofollow">	<!-- TODO: remove before publishing -->
 	<meta name="viewport" content="width=device-width">
-	<link rel="shortcut icon" href="/favicon.ico">
+	<link rel="shortcut icon" href="favicon.png">
+	<link rel="shortcut icon" href="favicon.ico">
 	<!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
 	<link href='http://fonts.googleapis.com/css?family=Lato:300italic' rel='stylesheet' type='text/css'>
 	<!-- build:css(.) styles/vendor.css -->
@@ -232,11 +233,10 @@
     <script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/1.16.0/plugins/CSSPlugin.min.js"></script>
     <script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/1.16.0/plugins/CSSRulePlugin.min.js"></script>
     <script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/1.16.0/plugins/ScrollToPlugin.min.js"></script>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
 
 	<!-- build:js(.) scripts/vendor.js -->
 		<!-- bower:js -->
-		<script src="bower_components/jquery/dist/jquery.js"></script>
-		<script src="bower_components/scrollmagic/scrollmagic/uncompressed/ScrollMagic.js"></script>
 		<!-- endbower -->
 	<!-- endbuild -->
 
@@ -254,14 +254,15 @@
 	</script>
 
 	<!-- build:js({app,.tmp}) scripts/main.js -->
+        <script src="scripts/vendor/ScrollMagic.min.js"></script>
+        <script src="scripts/vendor/animation.gsap.js"></script>
+        <script src="scripts/vendor/prism.min.js" data-manual></script>
+
 		<script src="scripts/main.js"></script>
         <script src="scripts/components/logo.js"></script>
         <script src="scripts/components/sourceViewer.js"></script>
 		<script src="scripts/components/stickyNavigation.js"></script>
 		<script src="scripts/components/sections.js"></script>
-
-        <script src="scripts/vendor/animation.gsap.js"></script>
-        <script src="scripts/vendor/prism.min.js" data-manual></script>
 	<!-- endbuild -->
 </body>
 </html>
