@@ -11,6 +11,7 @@ $(document).ready(function() {
 
         var mapOptions = {
             zoom: 14,
+            scrollwheel: false,
             center: new google.maps.LatLng(location.lat, location.long),
             styles: [{
                 featureType: 'landscape',
