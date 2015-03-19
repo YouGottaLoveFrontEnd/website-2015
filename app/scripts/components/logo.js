@@ -25,7 +25,7 @@ var generatePath = function (element) {
 };
 
 $(document).ready(function () {
-  var logo_letters = $('.letter'),
+  var logo_letters = $('.intro .letter'),
     scenes = [],
     controller = new ScrollMagic.Controller();
 

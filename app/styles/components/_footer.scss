@@ -1,0 +1,41 @@
+.footer {
+  color: $color-white;
+  text-align: center;
+
+  .inner {
+    padding: $footer-padding 0;
+
+    > * + * {
+      @include set-if-exists(margin, 0);
+      margin: $footer-spacing 0;
+    }
+  }
+
+  .logo {
+    border-width: $footer-logo-border-width;
+    padding: $footer-logo-padding;
+
+    .letter {
+      width: $footer-letter-width;
+      text-align: center;
+    }
+  }
+
+  .subtitle {
+    padding-top: 10px;
+    font-size: $footer-subtitle-font-size;
+  }
+
+  .email {
+    font-size: $footer-email-font-size;
+    font-weight: $footer-email-font-weight;
+    letter-spacing: $footer-email-letter-spacing;
+    color: $color-white;
+    text-decoration: none;
+    display: block;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
