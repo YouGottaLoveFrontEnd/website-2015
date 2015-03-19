@@ -38,11 +38,15 @@ $nav-offset: 80px;
 $nav-link-color: $color-white;
 $nav-link-font-size: 0.6rem;
 $nav-link-vertical-spacing: 0.5rem;
+$nav-link-mobile-font-size: 1.5rem;
+$nav-link-mobile-vertical-spacing: 1.5rem;
 $nav-bullet-size: $border-width;
 $nav-bullet-offset: $nav-bullet-size * -1.5;
 $nav-bullet-opacity: 0.5;
 $nav-bullet-opacity_active: 1;
 $nav-bullet-background: $color-white;
+$nav-toggle-coordinate: 15px;
+$nav-toggle-size: 8px;
 
 // Intro
 // ----------------------------------------------------------------------

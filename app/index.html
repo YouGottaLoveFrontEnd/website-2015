@@ -34,7 +34,7 @@
     </div>
 
 	<nav class="nav">
-		<ul>
+		<ul class="nav-list">
 			<li class="nav-item">
 				<a class="nav-link active" href="#intro">Home</a>
 			</li>
@@ -54,6 +54,9 @@
 				<a class="nav-link" href="#registration">Registration</a>
 			</li>
 		</ul>
+		<a class="nav-toggle" id="navToggle">
+			<span>Menu</span>
+		</a>
 	</nav>
 
 	<header id="intro" class="intro">
@@ -244,15 +247,16 @@
 	</script>
 
 	<!-- build:js({app,.tmp}) scripts/main.js -->
-  <script src="scripts/vendor/ScrollMagic.min.js"></script>
-  <script src="scripts/vendor/animation.gsap.js"></script>
-  <script src="scripts/vendor/prism.min.js" data-manual></script>
+		<script src="scripts/vendor/ScrollMagic.min.js"></script>
+		<script src="scripts/vendor/animation.gsap.js"></script>
+		<script src="scripts/vendor/prism.min.js" data-manual></script>
 
-  <script src="scripts/main.js"></script>
-  <script src="scripts/components/logo.js"></script>
-  <script src="scripts/components/sourceViewer.js"></script>
-  <script src="scripts/components/stickyNavigation.js"></script>
-  <script src="scripts/components/sections.js"></script>
+		<script src="scripts/main.js"></script>
+		<script src="scripts/components/logo.js"></script>
+		<script src="scripts/components/sourceViewer.js"></script>
+		<script src="scripts/components/stickyNavigation.js"></script>
+		<script src="scripts/components/mobileNavigation.js"></script>
+		<script src="scripts/components/sections.js"></script>
 	<!-- endbuild -->
 </body>
 </html>
