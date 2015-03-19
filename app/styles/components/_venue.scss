@@ -2,6 +2,7 @@
   position: relative;
   right: 5%;
   padding-bottom: 400px;
+  width: 50%;
 
   .venue-location > span {
     display: block;
@@ -21,9 +22,9 @@
 
   .venue-map {
     position: absolute;
-    width: 94%;
+    width: 90%;
     height: 450px;
-    left: 11%;
+    left: 14%;
 
     iframe {
       width: 100%;
