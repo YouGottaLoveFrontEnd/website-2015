@@ -21,10 +21,9 @@
 
 	.subtitle {
 		@extend %title;
-		@include translate(-50%, -100%);
-		top: $intro-title-offset;
+		@include translate(-50%, 100%);
 		font-size: $intro-title-subtitle-font-size;
-		font-style: italic;
+        bottom: $intro-title-offset;
 		letter-spacing: 2px;
         opacity: 0;
 
@@ -33,13 +32,6 @@
 		}
 	}
 
-	.datetime {
-		@extend %title;
-		@include translate(-50%, 100%);
-		bottom: $intro-title-offset;
-		font-size: $intro-title-datetime-font-size;
-        opacity: 0;
-	}
 }
 
 .logo {
