@@ -1,6 +1,33 @@
-.map {
-  iframe {
-    width: 100%;
-    height: 400px;
+#venue {
+  position: relative;
+  right: 5%;
+  padding-bottom: 400px;
+
+  .venue-location > span {
+    display: block;
+  }
+
+  .location-city {
+    font-size: 1.3em;
+  }
+
+  .location-venue {
+
+  }
+
+  .venue-directions {
+    margin: 30px 0 40px;
+  }
+
+  .venue-map {
+    position: absolute;
+    width: 94%;
+    height: 450px;
+    left: 11%;
+
+    iframe {
+      width: 100%;
+      height: 100%;
+    }
   }
 }
