@@ -32,6 +32,49 @@
 		}
 	}
 
+    .actions {
+      margin-top: 15px;
+      bottom: -20%;
+
+      .button {
+        color: $color-white;
+        border-color: $color-white;
+        padding: $button-action-spacing-vertical $button-action-spacing-horizontal;
+
+        &:first-child {
+          background-color: $color-white;
+          color: $color-green;
+          margin-right: 15px;
+
+          &:after {
+            background-color: transparent;
+          }
+
+          &:hover {
+            color: $color-white;
+            &:after {
+              background-color: $color-green;
+            }
+          }
+        }
+
+        &:last-child {
+          &:after {
+            background-color: $color-white;
+          }
+
+          &:hover {
+            color: $color-green;
+            &:after {
+              background-color: $color-white;
+            }
+          }
+        }
+
+      }
+
+    }
+
 }
 
 .logo {
