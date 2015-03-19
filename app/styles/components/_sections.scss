@@ -1,4 +1,5 @@
 .section {
+    @include box-shadow(17px 19px 5px -5px rgba(0,0,0,0.06));
 	box-sizing: border-box;
 	margin: $section-margin-top auto $section-margin-bottom auto;
 	min-height: 100% - $section-margin-top - $section-margin-bottom;
@@ -12,9 +13,6 @@
 	/*border: solid $border-width $section-border-color-a;*/
 	/*border-image: linear-gradient(to right, $section-border-color-a, $section-border-color-b) 1% stretch;*/
 	padding: 7%;
-    -webkit-box-shadow: 10px 19px 5px -5px rgba(0,0,0,0.04);
-    -moz-box-shadow: 10px 19px 5px -5px rgba(0,0,0,0.04);
-    box-shadow: 10px 19px 5px -5px rgba(0,0,0,0.04);
 	@include respond-to("mobile") {
 		width: 88%;
 	}
@@ -48,9 +46,7 @@ body {
 		@include position(absolute, nil, nil, 0, 0);
 		@include pseudo-element($section-header-hr-width, $section-header-hr-height);
 		background: $section-header-hr-background;
-        -webkit-box-shadow: 10px 19px 5px -5px rgba(0,0,0,0.04);
-        -moz-box-shadow: 10px 19px 5px -5px rgba(0,0,0,0.04);
-        box-shadow: 10px 19px 5px -5px rgba(0,0,0,0.04);
+        
 	}
 
 	> * {
@@ -65,6 +61,7 @@ body {
 	&:before {
 		@include translateX(-115%);
 		@include position(absolute, -20%);
+        @include box-shadow(17px 19px 5px -5px rgba(0,0,0,0.06));
 
 		counter-increment: section;
 		content: "0" counter(section) " /";
