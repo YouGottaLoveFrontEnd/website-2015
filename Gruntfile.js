@@ -30,10 +30,10 @@ module.exports = function (grunt) {
 
 		// Watches files for changes and runs tasks based on the changed files
 		watch: {
-			bower: {
-				files: ['bower.json'],
-				tasks: ['wiredep']
-			},
+			//bower: {
+			//	files: ['bower.json'],
+			//	tasks: ['wiredep']
+			//},
 			js: {
 				files: ['<%= config.app %>/scripts/{,*/}*.js'],
 				tasks: ['jshint'],
@@ -159,7 +159,6 @@ module.exports = function (grunt) {
 				javascriptsDir: '<%= config.app %>/scripts',
 				fontsDir: '<%= config.app %>/styles/fonts',
 				generatedImagesDir: '.tmp/images/generated',
-				importPath: 'bower_components',
 				httpImagesPath: '../images',
 				httpGeneratedImagesPath: '../images/generated',
 				httpFontsPath: 'fonts',
@@ -191,18 +190,6 @@ module.exports = function (grunt) {
 					src: '{,*/}*.css',
 					dest: '.tmp/styles/'
 				}]
-			}
-		},
-
-		// Automatically inject Bower components into the HTML file
-		wiredep: {
-			app: {
-				ignorePath: new RegExp('^<%= config.app %>/|../'),
-				src: ['<%= config.app %>/index.html']
-			},
-			sass: {
-				src: ['<%= config.app %>/styles/{,*/}*.{scss,sass}'],
-				ignorePath: /(\.\.\/){1,2}bower_components\//
 			}
 		},
 
@@ -365,7 +352,6 @@ module.exports = function (grunt) {
 
 		grunt.task.run([
 			'clean:server',
-			'wiredep',
 			'concurrent:server',
 			'autoprefixer',
 			'connect:livereload',
@@ -395,7 +381,6 @@ module.exports = function (grunt) {
 
 	grunt.registerTask('build', [
 		'clean:dist',
-		'wiredep',
 		'useminPrepare',
 		'concurrent:dist',
 		'autoprefixer',
