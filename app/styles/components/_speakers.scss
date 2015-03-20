@@ -73,4 +73,10 @@
     font-family: "futura-pt",sans-serif;
     font-style: normal;
     font-weight: 400;
+
+  a {
+    text-decoration: none;
+    color: $color-green;
+    @include animated-link($color-green, 4px);
+  }
 }

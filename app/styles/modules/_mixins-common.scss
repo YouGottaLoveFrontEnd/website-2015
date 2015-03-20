@@ -25,3 +25,22 @@
 @mixin brand-gradient($direction: bottom) {
 	@include background-image(linear-gradient(to $direction, $color-blue, $color-green, $color-green));
 }
+
+@mixin animated-link($color: $color-white, $bottom: 0) {
+  position: relative;
+  display: inline-block;
+
+  &:before {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 1px;
+    bottom: $bottom;
+    background-color: $color;
+    @include transition(all 0.3s ease-in-out);
+  }
+
+  &:hover:before {
+    width: 100%
+  }
+}

@@ -33,9 +33,7 @@
     color: $color-white;
     text-decoration: none;
     display: block;
-
-    &:hover {
-      text-decoration: underline;
-    }
+    margin-top: 0;
+    @include animated-link($color-white, -5px);
   }
 }
