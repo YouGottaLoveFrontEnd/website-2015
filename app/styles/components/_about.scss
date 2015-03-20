@@ -1,0 +1,8 @@
+.content {
+  max-height: 150px;
+  overflow: hidden;
+  transition: max-height 1s;
+}
+.expand {
+  max-height: 1000px;
+}
