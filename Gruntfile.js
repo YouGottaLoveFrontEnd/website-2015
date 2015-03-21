@@ -342,13 +342,7 @@ module.exports = function (grunt) {
 
     'gh-pages': {
       options: {
-        base: 'dist',
-        repo: 'https://github.com/YouGottaLoveFrontEnd/website-2015.git',
-        message: 'Autodeploy',
-        user: {
-          name: 'bolshchikov',
-          email: 'sergey@bolshchikov.net'
-        }
+        base: 'dist'
       },
       src: ['**']
     }
