@@ -1,0 +1,61 @@
+#organizers {
+  padding-bottom: 20%;
+}
+
+.organizers-text {
+  font-size: 1.3rem;
+  font-weight: 300;
+}
+
+.organizers-characters {
+  position: absolute;
+  bottom: -8%;
+  right: -5%;
+  width: 85%;
+  height: 33%;
+}
+
+.organizer {
+  position: relative;
+  display: inline-block;
+  width: 16%;
+  height: 100%;
+
+  &:hover .organizer-header {
+    visibility: visible;
+  }
+}
+
+.organizer-header {
+  position: absolute;
+  left: -5%;
+  bottom: 100%;
+  border: 1px solid $color-black;
+  padding: 2%;
+  visibility: hidden;
+  text-align: center;
+  width: 110%;
+  background-color: $color-white;
+}
+
+.organizer-name {
+  margin-bottom: -7%;
+  font-weight: 500;
+}
+
+.organizer-link {
+  text-decoration: none;
+  color: $color-green;
+  @include animated-link($color-green, 4px);
+}
+
+.organizer-pic {
+  position: absolute;
+  bottom: 0;
+  height: 95%;
+
+  img {
+    height: 100%;
+    width: 100%;
+  }
+}
