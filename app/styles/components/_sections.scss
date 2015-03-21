@@ -12,7 +12,7 @@
 	line-height: $section-line-height;
 	/*border: solid $border-width $section-border-color-a;*/
 	/*border-image: linear-gradient(to right, $section-border-color-a, $section-border-color-b) 1% stretch;*/
-	padding: 7%;
+	padding: $section-padding;
 	@include respond-to("mobile") {
 		width: 88%;
 	}
