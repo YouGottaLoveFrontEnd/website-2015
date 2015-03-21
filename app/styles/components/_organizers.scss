@@ -40,13 +40,15 @@
 
 .organizer-name {
   margin-bottom: -7%;
-  font-weight: 500;
+  font-weight: 400;
 }
 
 .organizer-link {
   text-decoration: none;
   color: $color-green;
   @include animated-link($color-green, 4px);
+  font-weight: 300;
+
 }
 
 .organizer-pic {
