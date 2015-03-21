@@ -342,7 +342,12 @@ module.exports = function (grunt) {
 
     'gh-pages': {
       options: {
-        base: 'dist'
+        base: 'dist',
+        message: 'Autodeploy',
+        user: {
+          name: 'bolshchikov',
+          email: 'sergey@bolshchikov.net'
+        }
       },
       src: ['**']
     }
