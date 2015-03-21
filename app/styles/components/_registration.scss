@@ -20,6 +20,70 @@
     display: inline-block;
     width: 100%;
     color: $color-white;
+    position: relative;
+    overflow: hidden;
+
+    &:hover {
+
+      .border-effect {
+        opacity: 1;
+
+        &.top {
+          right: 100%;
+        }
+
+        &.bottom {
+          left: 100%;
+        }
+
+        &.left {
+          top: 100%;
+        }
+
+        &.right {
+          bottom: 100%;
+        }
+      }
+    }
+  }
+
+  .border-effect {
+    position: absolute;
+    opacity: 0;
+    background-color: $color-white;
+    transition-property: top, left, bottom, right;
+    transition-duration: 1s;
+    transition-timing-function: linear;
+
+    &.horizontal {
+      width: 2%;
+      height: 35%;
+    }
+
+    &.vertical {
+      width: 35%;
+      height: 3%;
+    }
+
+    &.top {
+      top: 0;
+      right: 2%;
+    }
+
+    &.bottom {
+      bottom: 0;
+      left: 2%;
+    }
+
+    &.left {
+      top: 0;
+      left: 0;
+    }
+
+    &.right {
+      bottom: 0;
+      right: 0;
+    }
   }
 
   .ticket-inner {
@@ -29,7 +93,8 @@
     text-align: center;
     padding: 12%;
     text-decoration: none;
-    color: $color-white;
+    color: $color-black;
+    background-color: $color-white;
 
     > * {
       line-height: 1.5;
