@@ -68,11 +68,10 @@ $(document).ready(function () {
 
   scenes.push(pinIntroScene);
 
-  for (var i = 0; i < logo_letters.length; i++) {
-    var pos = randomizeCellInMatrix(logoMatrix, logo_letters.length - i);
-    var pxs = getPixelCordsByMatrixCoords(pos, logoMatrix, logo_letters[i], $container);
-
   for (var i = 0; i < logoLetters.length; i++) {
+    var pos = randomizeCellInMatrix(logoMatrix, logoLetters.length - i);
+    var pxs = getPixelCordsByMatrixCoords(pos, logoMatrix, logoLetters[i], $container);
+
     var letterTween = new TimelineMax()
       .add(TweenMax.from(logoLetters[i], 1.2, {
         css: {
