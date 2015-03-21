@@ -7,6 +7,8 @@
 	padding: $button-spacing-vertical $button-spacing-horizontal;
 	position: relative;
 	z-index: 0;
+    bottom: 1px;
+    letter-spacing: $button-letter-spacing;
 
 	// handle anchor tag
 	@at-root a#{&} {

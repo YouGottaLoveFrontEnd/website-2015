@@ -40,6 +40,7 @@
         color: $color-white;
         border-color: $color-white;
         padding: $button-action-spacing-vertical $button-action-spacing-horizontal;
+        font-size: $button-action-font-size;
 
         &:first-child {
           background-color: $color-white;

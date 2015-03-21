@@ -58,7 +58,7 @@ function getPixelCordsByMatrixCoords(coords, matrix, element, $container) {
 }
 
 $(document).ready(function () {
-  var logo_letters = $('.intro .letter'),
+  var logoLetters = $('.intro .letter'),
     scenes = [],
     controller = new ScrollMagic.Controller(),
     $container = $('h1.logo');
@@ -72,8 +72,9 @@ $(document).ready(function () {
     var pos = randomizeCellInMatrix(logoMatrix, logo_letters.length - i);
     var pxs = getPixelCordsByMatrixCoords(pos, logoMatrix, logo_letters[i], $container);
 
+  for (var i = 0; i < logoLetters.length; i++) {
     var letterTween = new TimelineMax()
-      .add(TweenMax.from(logo_letters[i], 1.2, {
+      .add(TweenMax.from(logoLetters[i], 1.2, {
         css: {
           bezier: {
             curviness: 1.25,

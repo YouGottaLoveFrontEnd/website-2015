@@ -1,7 +1,8 @@
 .content {
-  max-height: 12rem;
+  max-height: 11rem;
   overflow: hidden;
   transition: max-height 1s;
+  font-weight: 300;
 }
 .expand {
   max-height: 1000px;
