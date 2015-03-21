@@ -1,0 +1,13 @@
+language: node_js
+node_js:
+  - "0.12"
+
+install:
+  - bundle install
+  - npm install
+
+before_script:
+  - npm install -g grunt-cli
+
+script:
+  - grunt build
