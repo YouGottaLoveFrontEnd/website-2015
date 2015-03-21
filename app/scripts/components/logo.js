@@ -25,7 +25,7 @@ var generatePath = function (element) {
 };
 
 $(document).ready(function () {
-  var logo_letters = $('.intro .letter'),
+  var logoLetters = $('.intro .letter'),
     scenes = [],
     controller = new ScrollMagic.Controller();
 
@@ -34,11 +34,11 @@ $(document).ready(function () {
 
   scenes.push(pinIntroScene);
 
-  for (var i = 0; i < logo_letters.length; i++) {
+  for (var i = 0; i < logoLetters.length; i++) {
     var letterTween = new TimelineMax()
-      .add(TweenMax.from(logo_letters[i], 1.2, {
+      .add(TweenMax.from(logoLetters[i], 1.2, {
         css: {
-          bezier: generatePath(logo_letters[i])
+          bezier: generatePath(logoLetters[i])
         },
         ease: Power1.easeInOut
       }));

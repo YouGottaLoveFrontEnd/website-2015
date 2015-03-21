@@ -17,5 +17,14 @@
   "strict": true,
   "trailing": true,
   "smarttabs": true,
-  "jquery": true
+  "jquery": true,
+  "globals": {
+    "ScrollMagic": true,
+    "TimelineMax": true,
+    "TweenMax": true,
+    "Power1": true,
+    "Prism": true,
+    "google": true,
+    "marker": true
+  }
 }

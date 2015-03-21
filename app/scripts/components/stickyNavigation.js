@@ -9,8 +9,13 @@ $(document).ready(function () {
         hash = $element.attr('href'),
         $target = $(hash);
 
-    var scene = new ScrollMagic.Scene({triggerElement: $element.attr('href'), duration: $target.outerHeight(), offset: 400, triggerHook: "onEnter"})
-      .setClassToggle(element, "active")
+    new ScrollMagic.Scene({
+      triggerElement: $element.attr('href'),
+      duration: $target.outerHeight(),
+      offset: 400,
+      triggerHook: 'onEnter'
+    })
+      .setClassToggle(element, 'active')
       .addTo(stickyNavigationController);
   });
 
@@ -18,15 +23,15 @@ $(document).ready(function () {
     TweenMax.to(window, 0.5, {scrollTo: {y: newpos-200}});
   });
 
-  $(document).on("click", "a[href^=#]", function (e) {
-    var id = $(this).attr("href");
+  $(document).on('click', 'a[href^=#]', function (e) {
+    var id = $(this).attr('href');
     if ($(id).length > 0) {
       e.preventDefault();
 
       stickyNavigationController.scrollTo(id);
 
       if (window.history && window.history.pushState) {
-        history.pushState("", document.title, id);
+        history.pushState('', document.title, id);
       }
     }
   });

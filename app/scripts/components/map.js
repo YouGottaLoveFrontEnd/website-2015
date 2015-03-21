@@ -47,10 +47,10 @@ $(document).ready(function () {
 
     var mapElement = document.querySelector('.venue-map');
 
-    var map = new google.maps.Map(mapElement, mapOptions);
-    var marker = new google.maps.Marker({
+
+    new google.maps.Marker({
       position: new google.maps.LatLng(location.lat, location.long),
-      map: map,
+      map: new google.maps.Map(mapElement, mapOptions),
       icon: {
         url: 'images/location-pin.png',
         scaledSize: new google.maps.Size(28.5, 45.5)
