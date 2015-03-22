@@ -4,6 +4,7 @@
   .tickets {
     @include clearfix();
     margin-bottom: 5%;
+    padding-top: 5%;
   }
 
   .ticket {
