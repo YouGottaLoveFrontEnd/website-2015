@@ -6,12 +6,13 @@
   }
 
   .ticket {
-    width: 46%;
+    width: 42%;
     max-width: 400px;
     float: left;
 
     &:nth-child(2) {
-      float: right;
+      float: left;
+      margin-left: 30px;
     }
   }
 
@@ -102,22 +103,25 @@
   }
 
   .ticket-name {
-    font-size: 1.35rem;
+    font-size: 1rem;
   }
 
   .ticket-price {
-    font-size: 2.2rem;
+    font-size: 1rem;
+    font-weight: 300;
   }
 
   .ticket-details {
     display: block;
-    font-size: 1.05rem;
+    font-size: 1rem;
+    font-weight: 300;
+
   }
 
   .ticket-note {
     margin-top: 5%;
     text-align: center;
-    font-size: 1.1rem;
+    font-size:0.9rem;
     color: $color-green;
     font-weight: 300;
     letter-spacing: 1px;
@@ -127,7 +131,8 @@
   .benefits-list {
     list-style-type: disc;
     margin-left: 3%;
-    font-size: 1.1rem;
+    font-size: 1rem;
+    font-weight: 300;
 
     li {
       padding-left: 1%;
@@ -135,6 +140,7 @@
   }
 
   .benefits-title {
-    font-size: 1.8rem;
+    font-size: 1rem;
+    font-weight: 300;
   }
 }
