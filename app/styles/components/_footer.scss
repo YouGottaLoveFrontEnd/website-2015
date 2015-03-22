@@ -18,12 +18,14 @@
     .letter {
       width: $footer-letter-width;
       text-align: center;
+      margin-left: 0em;
     }
   }
 
   .subtitle {
     padding-top: 10px;
     font-size: $footer-subtitle-font-size;
+    letter-spacing: 2px;
   }
 
   .email {
