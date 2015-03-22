@@ -2,19 +2,19 @@
 
 $(document).ready(function () {
   var scenes = [],
-      controller = new ScrollMagic.Controller(),
-      $sections = $('.section');
+    controller = new ScrollMagic.Controller(),
+    $sections = $('.section');
 
   var windowHeight = $(window).height();
   var documentHeight = $(document).height();
 
-  $sections.each(function(index, element) {
+  $sections.each(function (index, element) {
     var $section = $(element),
-        sectionOuterHeight = $section.outerHeight(),
-        sectionOuterWidth = $section.outerWidth(),
-        sectionOffset = $section.offset().left,
-        $illustration = $('<div class="section-illustration"></div>'),
-        illustrationWidth;
+      sectionOuterHeight = $section.outerHeight(),
+      sectionOuterWidth = $section.outerWidth(),
+      sectionOffset = $section.offset().left,
+      $illustration = $('<div class="section-illustration"></div>'),
+      illustrationWidth;
 
     $section.after($illustration);
     illustrationWidth = $illustration.width();
@@ -33,7 +33,10 @@ $(document).ready(function () {
         ease: Power1.easeInOut
       }));
 
-    var sectionIllustrationScene = new ScrollMagic.Scene({triggerElement: element, duration: Math.max(windowHeight, sectionOuterHeight * 1.5)})
+    var sectionIllustrationScene = new ScrollMagic.Scene({
+      triggerElement: element,
+      duration: Math.max(windowHeight, sectionOuterHeight * 1.5)
+    })
       .setTween(sectionIllustrationTween);
 
     scenes.push(sectionIllustrationScene);
@@ -54,15 +57,18 @@ $(document).ready(function () {
 
   var mapTween = new TimelineMax()
     .add(TweenMax.to('.venue-map', 1.2, {
-        css: {
-          y: '-=40'
-        },
-        ease: Power1.easeInOut
+      css: {
+        y: '-=40'
+      },
+      ease: Power1.easeInOut
     }));
 
   var $venueSectionElement = $('section#venue');
 
-  var mapScene = new ScrollMagic.Scene({triggerElement: $venueSectionElement.get(0), duration: $venueSectionElement.outerHeight()})
+  var mapScene = new ScrollMagic.Scene({
+    triggerElement: $venueSectionElement.get(0),
+    duration: $venueSectionElement.outerHeight()
+  })
     .setTween(mapTween);
 
   scenes.push(mapScene);
