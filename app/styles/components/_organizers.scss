@@ -36,7 +36,7 @@
   left: -5%;
   bottom: 100%;
   border: 1px solid $color-black;
-  padding: 8% 10% 8% 2%;
+  padding: 8% 12% 8% 12%;
   display: none;
   text-align: left;
   width: 110%;
@@ -57,6 +57,7 @@
   @include animated-link($color-green, 4px);
   font-weight: 300;
   font-size: 0.9rem;
+  letter-spacing: 1px;
 }
 
 .organizer-photo {
