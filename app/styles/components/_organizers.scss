@@ -33,14 +33,13 @@
 
 .organizer-header {
   position: absolute;
-  left: -5%;
+  left: -20%;
   bottom: 100%;
-  border: 1px solid $color-black;
-  padding: 8% 12% 8% 12%;
+  padding: 8% 12%;
   display: none;
   text-align: left;
   width: 110%;
-  background-color: $color-white;
+  background-color: rgba(0,0,0,0.7);
 }
 
 .organizer-name {
