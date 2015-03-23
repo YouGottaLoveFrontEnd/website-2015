@@ -44,3 +44,9 @@
     width: 100%
   }
 }
+
+@mixin js-mobile() {
+	.mobile & {
+		@content;
+	}
+}

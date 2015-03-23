@@ -1,6 +1,12 @@
+/* global isMobile */
+
 'use strict';
 
 $(document).ready(function () {
+  if (isMobile) {
+    return;
+  }
+
   var scenes = [],
     controller = new ScrollMagic.Controller(),
     $sections = $('.section');

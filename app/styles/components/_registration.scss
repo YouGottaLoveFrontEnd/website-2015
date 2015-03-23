@@ -1,5 +1,7 @@
 #registration {
-  width:55%;
+  @include respond-to("down to tablet") {
+  	width: 55%;
+  }
 
   .tickets {
     @include clearfix();
@@ -27,7 +29,6 @@
     overflow: hidden;
 
     &:hover {
-
       .border-effect {
         opacity: 1;
 
@@ -45,6 +46,10 @@
 
         &.right {
           bottom: 100%;
+        }
+
+        @include js-mobile() {
+		  display: none;
         }
       }
     }

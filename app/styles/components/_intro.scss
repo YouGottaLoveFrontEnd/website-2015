@@ -8,6 +8,10 @@
 	text-transform: uppercase;
 	font-size: $intro-font-size;
 
+	@include js-mobile() {
+		min-height: 0;
+	}
+
 	.inner {
 		@include position(absolute, 50%, nil, nil, 50%);
 		@include translate(-50%, -50%);
@@ -26,6 +30,10 @@
         top: $intro-title-offset;
 		letter-spacing: 2px;
         opacity: 0;
+
+		@include js-mobile() {
+			opacity: 1;
+		}
 
 		@include respond-to("mobile") {
 			font-size: $intro-title-subtitle-font-size * 0.9;

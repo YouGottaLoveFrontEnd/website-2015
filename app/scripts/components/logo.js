@@ -1,3 +1,5 @@
+/* global isMobile */
+
 'use strict';
 
 var logoMatrix = [
@@ -58,6 +60,11 @@ function getPixelCordsByMatrixCoords(coords, matrix, element, $container) {
 }
 
 $(document).ready(function () {
+
+  if (isMobile) {
+    return;
+  }
+
   var logoLetters = $('.intro .letter'),
     scenes = [],
     controller = new ScrollMagic.Controller(),

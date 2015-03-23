@@ -1,8 +1,11 @@
 #venue {
   position: relative;
-  right: 5%;
   padding-bottom: 400px;
-  width: 50%;
+
+  @include respond-to("down to tablet") {
+  	width: 50%;
+    right: 5%;
+  }
 
   .venue-location > span {
     display: block;

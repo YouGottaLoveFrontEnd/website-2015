@@ -11,20 +11,27 @@
 	line-height: $section-line-height;
 	padding: $section-padding;
 	z-index: 1;
+
 	@include respond-to("mobile") {
 		width: 88%;
 	}
 
     &:first-child {
-        margin-top: 90%;
-    }
+	    margin-top: 90%;
+
+		@include js-mobile() {
+			margin-top: $section-margin-top;
+	    }
+	}
 }
 
 // Section Illustration: Gradient box
 .section-illustration {
-	@include pseudo-element(40%, 400px);
+	@include pseudo-element(40%, 80%);
 	@include brand-gradient(right);
+	@include translate(15%, 15%);
 	position: relative;
+	max-height: 450px;
 	z-index: -1;
 	opacity: 0.55;
 	margin-top: -400px;
@@ -44,7 +51,7 @@ body {
 		@include position(absolute, nil, nil, 0, 0);
 		@include pseudo-element($section-header-hr-width, $section-header-hr-height);
 		background: $section-header-hr-background;
-        
+
 	}
 
 	> * {
@@ -90,7 +97,7 @@ section.section:nth-of-type(even){
 }
 
 section.section:nth-of-type(odd){
-	left: -10%;
+	left: -5%;
 
 	& + .section-illustration {
 		right: 0%;

@@ -6,12 +6,12 @@
     padding: $footer-padding 0;
 
     > * + * {
-      @include set-if-exists(margin, 0);
       margin: $footer-spacing 0;
     }
   }
 
   .logo {
+  	font-size: $footer-logo-font-size;
     border-width: $footer-logo-border-width;
     padding: $footer-logo-padding;
 

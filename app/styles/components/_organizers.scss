@@ -21,6 +21,10 @@
   width: 16%;
   height: 100%;
 
+  @include respond-to("up to phablet") {
+  	width: 14%;
+  }
+
   &:hover .organizer-header {
     display: block;
   }
@@ -51,13 +55,8 @@
 
 }
 
-.organizer-pic {
+.organizer-photo {
   position: absolute;
   bottom: 0;
   height: 95%;
-
-  img {
-    height: 100%;
-    width: 100%;
-  }
 }

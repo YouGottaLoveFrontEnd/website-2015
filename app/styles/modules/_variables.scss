@@ -65,9 +65,10 @@ $intro-title-subtitle-letter-spacing: 3.2px;
 $footer-padding: 150px;
 $footer-logo-border-width: 3px;
 $footer-logo-padding: 1%;
-$footer-subtitle-font-size: 20px;
+$footer-logo-font-size: 20px;	// need it always t be a square, so use px
+$footer-subtitle-font-size: 1rem;
 $footer-subtitle-letter-spacing: 2;
-$footer-email-font-size: 21px;
+$footer-email-font-size: 1rem;
 $footer-email-font-weight: 100;
 $footer-email-letter-spacing: 2px;
 $footer-spacing: 20px;
