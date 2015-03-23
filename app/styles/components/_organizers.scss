@@ -33,7 +33,7 @@
 
 .organizer-header {
   position: absolute;
-  left: -20%;
+  left: -15%;
   bottom: 100%;
   padding: 8% 12%;
   display: none;
@@ -48,6 +48,7 @@
   text-transform: uppercase;
   letter-spacing: 1px;
   font-size: 0.6rem;
+  color: $color-white;
 }
 
 .organizer-link {
