@@ -14,7 +14,7 @@ $(document).ready(function () {
   var sourceViewerTween = new TimelineMax()
     .add(TweenMax.to('.source-viewer', 1.2, {
       css: {
-        y: '-=2000'
+        y: '-=3000'
       },
       ease: Power1.easeInOut
     }));

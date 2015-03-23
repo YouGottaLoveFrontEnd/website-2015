@@ -4,6 +4,24 @@ var isMobile = (function () {
   return typeof(window.orientation) !== 'undefined';
 })();
 
+var pageLoaded = false;
+var minimalLoadTimeCounter = 0;
+
+var minimalLoadTimeInterval = setInterval(function() {
+  minimalLoadTimeCounter++;
+
+  if (minimalLoadTimeCounter >= 3 && pageLoaded) {
+    clearInterval(minimalLoadTimeInterval);
+
+    $('.loader').fadeOut(function() {
+      $('.preloader').fadeOut(function () {
+        $('body').addClass('loaded');
+        $('.preloader').remove();
+      });
+    });
+  }
+}, 1000);
+
 $(document).ready(function () {
   $('body')
     .addClass('ready')
@@ -16,7 +34,5 @@ $(window).load(function() {
     $element.attr('src', $element.attr('data-src'));
   });
 
-  $('.preloader').fadeOut(function() {
-    $('body').addClass('loaded');
-  });
+  pageLoaded = true;
 });

@@ -14,48 +14,42 @@
     position: absolute;
     top: 50%;
     left: 50%;
-    padding: 70px;
+    width: 120px;
+    height: 120px;
     margin: auto;
     border-radius: 50%;
-    
-    &:after {
-        @include transform(translate(-50%, 0));
-        content: 'Loading...';
-        position: absolute;
-        display: inline-block;
-        white-space: nowrap;
-        left: 50%;
-        bottom: -40px;
-        color: #FFF;
-        font-weight: 300;
-        text-transform: uppercase;
-        opacity: 0;
-    }
+    overflow: hidden;
 
-    [class^='loader-step'] {
-        @include transform(translate(-50%, -50%));
+    .word {
+        @include transform(translate(-60px, -50%));
         position: absolute;
+        width: 500px;
         top: 50%;
         left: 50%;
-        opacity: 0;
-        color: #FFF;
-        font-size: 80px;
+        animation: loader-animation 2.5s steps(4) infinite;
     }
 
-	$brand-letters: "Y", "G", "L", "F", "E";
-    $letter-show-time: 500ms;
-    $total-show-time: length($brand-letters) * $letter-show-time;
-	@for $i from 1 through length($brand-letters) {
-        .loader-step-#{$i}  {
-            animation: loader-step-animation #{$total-show-time} (#{$i * $letter-show-time}) infinite;
+    .letter {
+        color: #FFF;
+        font-size: 70px;
+        width: 120px;
+        height: 120px;
+        display: inline-block;
+        text-align: center;
+        line-height: 120px;
+        margin-left: -4px;
+
+        &:first-child {
+            margin-left: 0;
         }
     }
 }
 
-@keyframes loader-step-animation {
-    20% { opacity: 1; }
-    40% { opacity: 0; }
-    60% { opacity: 0; }
-    80% { opacity: 0; }
-    100% { opacity: 0; }
+@keyframes loader-animation {
+    from {
+        @include transform(translate(-60px, -50%));
+    }
+    to {
+        @include transform(translate(-540px, -50%));
+    }
 }

@@ -1,4 +1,7 @@
 .footer {
+  @include transform(translateY(500px));
+  margin-top: 750px;
+  margin-bottom: 200px;
   color: $color-white;
   text-align: center;
 

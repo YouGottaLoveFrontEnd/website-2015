@@ -48,23 +48,10 @@ $(document).ready(function () {
     scenes.push(sectionIllustrationScene);
   });
 
-  var sectionTween = new TimelineMax()
-    .add(TweenMax.to('.section, .section-illustration', 1.2, {
-      css: {
-        y: '-=5000'
-      },
-      ease: Power1.easeInOut
-    }));
-
-  var sectionScene = new ScrollMagic.Scene({duration: documentHeight})
-    .setTween(sectionTween);
-
-  scenes.push(sectionScene);
-
   var mapTween = new TimelineMax()
     .add(TweenMax.to('.venue-map', 1.2, {
       css: {
-        y: '-=40'
+        y: '-=140'
       },
       ease: Power1.easeInOut
     }));
@@ -78,6 +65,24 @@ $(document).ready(function () {
     .setTween(mapTween);
 
   scenes.push(mapScene);
+
+  var footerTween = new TimelineMax()
+    .add(TweenMax.to('.footer', 1.2, {
+      css: {
+        y: '-=1000'
+      },
+      ease: Power1.easeInOut
+    }));
+
+  var $lastSectionElement = $('section:last-of-type');
+
+  var footerScene = new ScrollMagic.Scene({
+    triggerElement: $lastSectionElement.get(0),
+    duration: 1500
+  })
+    .setTween(footerTween);
+
+  scenes.push(footerScene);
 
   controller.addScene(scenes);
 });

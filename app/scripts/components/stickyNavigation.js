@@ -20,7 +20,7 @@ $(document).ready(function () {
   });
 
   stickyNavigationController.scrollTo(function (newpos) {
-    TweenMax.to(window, 0.5, {scrollTo: {y: newpos-200}});
+    TweenMax.to(window, 0.5, {scrollTo: {y: newpos-50}});
   });
 
   $(document).on('click', 'a[href^=#]', function (e) {
