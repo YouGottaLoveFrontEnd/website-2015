@@ -12,7 +12,6 @@ $(document).ready(function () {
     $sections = $('.section');
 
   var windowHeight = $(window).height();
-  var documentHeight = $(document).height();
 
   $sections.each(function (index, element) {
     var $section = $(element),
