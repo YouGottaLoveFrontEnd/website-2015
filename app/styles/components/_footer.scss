@@ -39,6 +39,6 @@
     text-decoration: none;
     display: block;
     margin-top: 0;
-    @include animated-link($color-white, -5px);
+    @include animated-link($color-white, -8px);
   }
 }
