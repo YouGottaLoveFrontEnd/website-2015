@@ -32,7 +32,7 @@ $(document).ready(function () {
 
     var sectionIllustrationElement = $(element).next('.section-illustration').get(0);
 
-    if ($section.attr('id') == 'organizers') {
+    if ($section.attr('id') === 'organizers') {
       tweenTo = '-150px';
       tweenDuration = 200;
     }
