@@ -19,7 +19,9 @@ $(document).ready(function () {
       sectionOuterWidth = $section.outerWidth(),
       sectionOffset = $section.offset().left,
       $illustration = $('<div class="section-illustration"></div>'),
-      illustrationWidth;
+      illustrationWidth,
+      tweenTo = '-=300',
+      tweenDuration = Math.max(windowHeight, sectionOuterHeight * 1.5);
 
     $section.after($illustration);
     illustrationWidth = $illustration.width();
@@ -30,17 +32,22 @@ $(document).ready(function () {
 
     var sectionIllustrationElement = $(element).next('.section-illustration').get(0);
 
+    if ($section.attr('id') == 'organizers') {
+      tweenTo = '-150px';
+      tweenDuration = 200;
+    }
+
     var sectionIllustrationTween = new TimelineMax()
       .add(TweenMax.to(sectionIllustrationElement, 1.2, {
         css: {
-          top: '-=300'
+          top: tweenTo
         },
         ease: Power1.easeInOut
       }));
 
     var sectionIllustrationScene = new ScrollMagic.Scene({
       triggerElement: element,
-      duration: Math.max(windowHeight, sectionOuterHeight * 1.5)
+      duration: tweenDuration
     })
       .setTween(sectionIllustrationTween);
 
