@@ -54,7 +54,7 @@
 .organizer-link {
   text-decoration: none;
   color: $color-green;
-  @include animated-link($color-green, 4px);
+  @include animated-link($color-green, 6px);
   font-weight: 300;
   font-size: 0.9rem;
   letter-spacing: 1px;
