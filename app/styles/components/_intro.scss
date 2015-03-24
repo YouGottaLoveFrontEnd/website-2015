@@ -28,7 +28,7 @@
 		@include translate(-50%, 100%);
 		font-size: $intro-title-subtitle-font-size;
         top: $intro-title-offset;
-		letter-spacing: 2px;
+		letter-spacing: 3px;
         opacity: 0;
 
 		@include js-mobile() {
