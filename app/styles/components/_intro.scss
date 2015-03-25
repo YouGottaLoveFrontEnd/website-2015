@@ -1,149 +1,136 @@
 .intro {
-	@include brand-gradient();
-	height: 100%;
-    min-height: 800px;
-	position: relative;
-	color: $color-white;
-	text-align: center;
-	text-transform: uppercase;
-	font-size: $intro-font-size;
+  @include brand-gradient();
+  height: 100%;
+  min-height: 800px;
+  position: relative;
+  color: $color-white;
+  text-align: center;
+  text-transform: uppercase;
+  font-size: $intro-font-size;
 
-	@include js-mobile() {
-		min-height: 0;
-	}
+  @include js-mobile() {
+    min-height: 0;
+  }
 
-	.inner {
-		@include position(absolute, 50%, nil, nil, 50%);
-		@include translate(-50%, -50%);
-		width: 100%;
-	}
+  .inner {
+    @include position(absolute, 50%, nil, nil, 50%);
+    @include translate(-50%, -50%);
+    width: 100%;
+  }
 
-	%title {
-		@include position(absolute, nil, nil, nil, 50%);
-		width: 100%;
-	}
+  %title {
+    @include position(absolute, nil, nil, nil, 50%);
+    width: 100%;
+  }
 
-	.subtitle {
-		@extend %title;
-		@include translate(-50%, 100%);
-		font-size: $intro-title-subtitle-font-size;
-        top: $intro-title-offset;
-		letter-spacing: 3px;
-        opacity: 0;
+  .subtitle {
+    @extend %title;
+    @include translate(-50%, 100%);
+    font-size: $intro-title-subtitle-font-size;
+    top: $intro-title-offset;
+    letter-spacing: 3px;
+    opacity: 0;
 
-		@include js-mobile() {
-			opacity: 1;
-		}
+    @include js-mobile() {
+      opacity: 1;
+    }
 
-		@include respond-to("mobile") {
-			font-size: $intro-title-subtitle-font-size * 0.9;
-		}
-	}
+    @include respond-to("mobile") {
+      font-size: $intro-title-subtitle-font-size * 0.9;
+    }
+  }
 
-    .actions {
-      margin-top: 15px;
-      bottom: -7%;
+  .actions {
+    margin-top: 15px;
+    bottom: -7%;
 
-      .button {
-        color: $color-white;
-        border-color: $color-white;
-        padding: $button-action-spacing-vertical $button-action-spacing-horizontal;
-        font-size: $button-action-font-size;
+    .button {
+      border-color: $color-white;
+      padding: $button-action-spacing-vertical $button-action-spacing-horizontal;
+      font-size: $button-action-font-size;
+      background-color: $color-white;
+      color: $color-green;
+      width: 9rem;
 
-        &:first-child {
-          background-color: $color-white;
-          color: $color-green;
-          margin-right: 15px;
-
-          &:after {
-            background-color: transparent;
-          }
-
-          &:hover {
-            color: $color-white;
-            &:after {
-              background-color: $color-green;
-            }
-          }
-        }
-
-        &:last-child {
-          &:after {
-            background-color: $color-white;
-          }
-
-          &:hover {
-            color: $color-green;
-            &:after {
-              background-color: $color-white;
-            }
-          }
-        }
-
+      &:after {
+        background-color: transparent;
       }
 
+      &:hover {
+        color: $color-white;
+        &:after {
+          background-color: $color-green;
+        }
+      }
+
+      &:last-child {
+        margin-left: 10px;
+        padding: 1rem;
+        width: 13rem;
+      }
     }
+  }
 
 }
 
 .logo {
-	border: solid $border-width;
-	line-height: $intro-logo-line-height;
-	font-size: $intro-logo-font-size;
-	text-align: left;
-	display: inline-block;
-	padding: $intro-logo-padding;
-    letter-spacing: $intro-logo-letter-spacing;
+  border: solid $border-width;
+  line-height: $intro-logo-line-height;
+  font-size: $intro-logo-font-size;
+  text-align: left;
+  display: inline-block;
+  padding: $intro-logo-padding;
+  letter-spacing: $intro-logo-letter-spacing;
 
-	a {
-		display: block;
-		text-decoration: none;
-		color: inherit;
-	}
+  a {
+    display: block;
+    text-decoration: none;
+    color: inherit;
+  }
 
-	.word {
-		display: block;
-		white-space: nowrap;
-	}
+  .word {
+    display: block;
+    white-space: nowrap;
+  }
 
-    .letter {
-        display: inline-block;
-        opacity: 0;
-        min-width: 1em;
-        text-align: center;
-        margin-left: -0.3em;
+  .letter {
+    display: inline-block;
+    opacity: 0;
+    min-width: 1em;
+    text-align: center;
+    margin-left: -0.3em;
+  }
+
+  .hide-letter {
+    color: transparent;
+  }
+
+  .will-be-censored {
+    &:after {
+      transition: color 100ms;
+    }
+  }
+
+  .is-censored {
+    position: relative;
+    //		letter-spacing: -0.15em;	// controls the space we're reserving
+
+    &.last-of-censored:after {
+      content: "_";
     }
 
-    .hide-letter {
-		color: transparent;
+    &:after {
+      @include position(absolute, 0, nil, nil, 0);
+      @include transform(translateY(-63%) scaleX(0.85));
+      letter-spacing: normal;
+      content: "___";
+      color: $color-white;
     }
-
-    .will-be-censored {
-        &:after {
-            transition: color 100ms;
-        }
-    }
-
-	.is-censored {
-		position: relative;
-//		letter-spacing: -0.15em;	// controls the space we're reserving
-
-        &.last-of-censored:after {
-            content: "_";
-        }
-
-        &:after {
-			@include position(absolute, 0, nil, nil, 0);
-			@include transform(translateY(-63%) scaleX(0.85));
-			letter-spacing: normal;
-			content: "___";
-			color: $color-white;
-        }
-    }
+  }
 }
 
 .ready {
-    .logo .letter {
-        opacity: 1;
-    }
+  .logo .letter {
+    opacity: 1;
+  }
 }
