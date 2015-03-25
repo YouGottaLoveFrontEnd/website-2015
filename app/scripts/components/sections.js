@@ -8,7 +8,7 @@ $(document).ready(function () {
   }
 
   var speakersBlocksHeight = $('.speakers').height();
-  $('#speakers').css('padding-bottom', speakersBlocksHeight);
+  $('#speakers').css('padding-bottom', speakersBlocksHeight-100);
 
   var scenes = [],
     controller = new ScrollMagic.Controller(),
@@ -55,7 +55,7 @@ $(document).ready(function () {
   var speakersTween = new TimelineMax()
     .add(TweenMax.to('.speakers', 1.2, {
       css: {
-        y: '-=300'
+        y: '-=150'
       },
       ease: Power1.easeInOut
     }));
