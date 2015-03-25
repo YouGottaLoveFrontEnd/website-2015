@@ -58,12 +58,23 @@
 		.speaker-bio {
 			opacity: 1;
 		}
+		.speaker-image {
+			-webkit-filter: grayscale(0%);
+			-moz-filter: grayscale(0%);
+			filter: grayscale(0%);
+		}
 	}
 }
 
 .speaker-image {
 	width: 100%;
 	display: block;
+	-webkit-filter: grayscale(100%);
+	-moz-filter: grayscale(100%);
+	filter: grayscale(100%);
+	transition: -webkit-filter 500ms ease-out,
+				-moz-filter 500ms ease-out,
+				filter 500ms ease-out;
 }
 
 .speaker-details {
