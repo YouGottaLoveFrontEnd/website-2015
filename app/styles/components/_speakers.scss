@@ -26,9 +26,18 @@
 // =| Component |========================================================
 // ======================================================================
 
+#speakers {
+	width: 55%;
+}
+
 .speakers {
 	@include margin-vertical($speaker-vertical-spacing);
 	font-size: 0;
+	position: absolute;
+	width: 90%;
+	left: 20%;
+	box-shadow: 7px 4px 46px 1px rgba(0, 0, 0, 0.27);
+	margin-top: 300px;
 }
 
 .speaker {
@@ -42,7 +51,7 @@
 		font-size: $speaker-font-size * 0.6;
 	}
 
-	&:hover {
+	&:not(.speaker-placeholder):hover {
 		.speaker-details {
 			height: calc(100% - 2rem);
 		}
@@ -93,10 +102,36 @@
     font-weight: 400;
 	opacity: 0;
 	transition: opacity 150ms 150ms ease-in;
+	line-height: 1.2rem;
 
   a {
     text-decoration: none;
     color: $color-green;
     @include animated-link($color-green, 4px);
   }
+}
+
+.speaker-placeholder {
+	.speaker-placeholder-image {
+		@include brand-gradient();
+		display: block;
+		padding-top: 100%; 	/* initial ratio of 1:1*/
+	}
+	.speaker-placeholder-text {
+		position: absolute;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		left: 0;
+		border: 7px solid #FFF;
+		padding: 30px;
+		font-size: 2rem;
+		text-transform: uppercase;
+		color: #FFF;
+
+		.word {
+			display: block;
+			line-height: 2.5rem;
+		}
+	}
 }

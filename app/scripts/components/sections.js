@@ -7,6 +7,9 @@ $(document).ready(function () {
     return;
   }
 
+  var speakersBlocksHeight = $('.speakers').height();
+  $('#speakers').css('padding-bottom', speakersBlocksHeight);
+
   var scenes = [],
     controller = new ScrollMagic.Controller(),
     $sections = $('.section');
@@ -32,11 +35,6 @@ $(document).ready(function () {
 
     var sectionIllustrationElement = $(element).next('.section-illustration').get(0);
 
-    if ($section.attr('id') === 'organizers') {
-      tweenTo = '-150px';
-      tweenDuration = 200;
-    }
-
     var sectionIllustrationTween = new TimelineMax()
       .add(TweenMax.to(sectionIllustrationElement, 1.2, {
         css: {
@@ -53,6 +51,24 @@ $(document).ready(function () {
 
     scenes.push(sectionIllustrationScene);
   });
+
+  var speakersTween = new TimelineMax()
+    .add(TweenMax.to('.speakers', 1.2, {
+      css: {
+        y: '-=300'
+      },
+      ease: Power1.easeInOut
+    }));
+
+  var $speakersSectionElement = $('section#speakers');
+
+  var speakersScene = new ScrollMagic.Scene({
+    triggerElement: $speakersSectionElement.get(0),
+    duration: $speakersSectionElement.outerHeight()
+  })
+    .setTween(speakersTween);
+
+  scenes.push(speakersScene);
 
   var mapTween = new TimelineMax()
     .add(TweenMax.to('.venue-map', 1.2, {
