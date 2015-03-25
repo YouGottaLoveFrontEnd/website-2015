@@ -16,7 +16,7 @@
 		}
 
 		.speaker {
-			@include speaker-size($items-per-row, $speaker-horizontal-spacing);
+			@include speaker-size($items-per-row);
 		}
 	}
 }
@@ -27,37 +27,47 @@
 // ======================================================================
 
 .speakers {
+	@include margin-vertical($speaker-vertical-spacing);
 	font-size: 0;
 }
 
 .speaker {
-	@include margin-vertical($speaker-vertical-spacing);
+	position: relative;
 	display: inline-block;
-	text-align: center;
+	text-align: left;
 	vertical-align: top;
 	font-size: $speaker-font-size;
 
 	@include respond-to("down to tablet") {
 		font-size: $speaker-font-size * 0.6;
 	}
+
+	&:hover {
+		.speaker-details {
+			height: calc(100% - 2rem);
+		}
+		.speaker-bio {
+			opacity: 1;
+		}
+	}
 }
 
 .speaker-image {
 	width: 100%;
-	border-radius: 50%;
+	display: block;
 }
 
-.speaker-header {
-	@include margin-vertical(nth($speaker-header-vertical-spacing, 1), nth($speaker-header-vertical-spacing, 2));
-	padding-bottom: $speaker-header-hr-spacing;
-	position: relative;
-
-	&:after {
-		@include pseudo-element($speaker-header-hr-width, $speaker-header-hr-height);
-		@include position(absolute, nil, nil, 0, 50%);
-		@include translateX(-50%);
-		background: $speaker-header-hr-background;
-	}
+.speaker-details {
+	@include padding-horizontal($speaker-horizontal-padding);
+	position: absolute;
+	bottom: 0;
+	width: calc(100% - 2rem);
+	background: rgba(255, 255, 255, 0.95);
+	margin: 1rem;
+	height: $speaker-details-collapsed-height;
+	overflow: hidden;
+	box-sizing: border-box;
+	transition: height 200ms ease-out;
 
 	> * {
 		@include margin-vertical($speaker-header-inner-vertical-spacing);
@@ -67,12 +77,22 @@
 .speaker-name {
 	text-transform: uppercase;
 	font-size: $speaker-name-font-size;
+	position: relative;
+	padding-bottom: 0.5rem;
+
+	&:after {
+		@include pseudo-element($speaker-header-hr-width, $speaker-header-hr-height);
+		@include position(absolute, nil, nil, 0, 0);
+		background: $speaker-header-hr-background;
+	}
 }
 
 .speaker-bio {
     font-family: "futura-pt",sans-serif;
     font-style: normal;
     font-weight: 400;
+	opacity: 0;
+	transition: opacity 150ms 150ms ease-in;
 
   a {
     text-decoration: none;

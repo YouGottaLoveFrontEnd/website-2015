@@ -116,13 +116,15 @@ $button-letter-spacing: 0.05rem;
 $speaker-sizes: (
 	"mobile": 1,
 	"down to phablet": 2,
-	"desktop": 3
+	"desktop": 2
 );
 $speaker-horizontal-spacing: 10%;
 $speaker-vertical-spacing: 7%;
+$speaker-horizontal-padding: 1rem;
 $speaker-font-size: 1.2rem;
+$speaker-details-collapsed-height: 2.95rem;
 $speaker-header-vertical-spacing: 2rem, 1.2rem;
-$speaker-header-inner-vertical-spacing: 0.3rem;
+$speaker-header-inner-vertical-spacing: 0.5rem;
 $speaker-header-hr-spacing: 0.4rem;
 $speaker-header-hr-width: 30%;
 $speaker-header-hr-height: 1px;
