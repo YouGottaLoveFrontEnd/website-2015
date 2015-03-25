@@ -320,6 +320,14 @@ module.exports = function (grunt) {
           src: [
             'resources/**/*'
           ]
+        }, {
+          expand: true,
+          dot: true,
+          cwd: './',
+          dest: '<%= config.dist %>',
+          src: [
+            'CNAME'
+          ]
         }]
       },
       styles: {
