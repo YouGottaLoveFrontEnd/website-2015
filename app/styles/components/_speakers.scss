@@ -113,7 +113,7 @@
 
 .speaker-placeholder {
 	.speaker-placeholder-image {
-		@include brand-gradient();
+        background-color: #00d09d;
 		display: block;
 		padding-top: 100%; 	/* initial ratio of 1:1*/
 	}
@@ -123,7 +123,6 @@
 		right: 0;
 		bottom: 0;
 		left: 0;
-		border: 7px solid #FFF;
 		padding: 30px;
 		font-size: 2rem;
 		text-transform: uppercase;
