@@ -1,11 +1,11 @@
 # YouGottaLoveFrontEnd [![Build Status](https://secure.travis-ci.org/YouGottaLoveFrontEnd/website-2015.svg?branch=master)](https://travis-ci.org/YouGottaLoveFrontEnd/website-2015)
 
-TL;DR
+***TL;DR**
 
-* What: Conference for Front-end
-* Where: Tel Aviv, Israel
-* When: 8-9th of June, 2015
-* Who: Douglas Crockford, Lea Verou, Martin Kleppe, and others
+* **What**: Conference for Front-end
+* **Where**: Tel Aviv, Israel
+* **When**: 8-9th of June, 2015
+* **Who**: Douglas Crockford, Lea Verou, Martin Kleppe, and others
 
 ---
 
