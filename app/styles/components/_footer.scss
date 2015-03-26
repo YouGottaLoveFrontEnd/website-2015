@@ -42,8 +42,8 @@
     @include animated-link($color-white, -8px);
   }
 
-  .twitter {
-    padding-left: 30px;
-    background: url(../images/twitter.svg) center left no-repeat;
+  .twitter img {
+    width: 32px;
+    height: 32px;
   }
 }
