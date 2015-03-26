@@ -2,7 +2,7 @@
 
 **TL;DR**
 
-* **What**: Conference for Front-end
+* **What**: Conference for Front-End developers
 * **Where**: Tel Aviv, Israel
 * **When**: 8-9th of June, 2015
 * **Who**: Douglas Crockford, Lea Verou, Martin Kleppe, and others
