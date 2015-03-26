@@ -320,7 +320,7 @@ module.exports = function (grunt) {
           src: [
             'resources/**/*'
           ]
-        } /*/, {
+        }, {
           expand: true,
           dot: true,
           cwd: './',
@@ -328,7 +328,7 @@ module.exports = function (grunt) {
           src: [
             'CNAME'
           ]
-        } */]
+        }]
       },
       styles: {
         expand: true,
