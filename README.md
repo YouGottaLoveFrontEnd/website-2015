@@ -1,5 +1,14 @@
 # YouGottaLoveFrontEnd [![Build Status](https://secure.travis-ci.org/YouGottaLoveFrontEnd/website-2015.svg?branch=master)](https://travis-ci.org/YouGottaLoveFrontEnd/website-2015)
 
+TL;DR
+
+* What: Conference for Front-end
+* Where: Tel Aviv, Israel
+* When: 8-9th of June, 2015
+* Who: Douglas Crockford, Lea Verou, Martin Kleppe, and others
+
+---
+
 The first international conference of its kind to be held in Israel, will take place in Tel Aviv
 from June 8th through June 9th, 2015. To kick off the inaugural edition of this annual conference,
 the world’s top three leaders in the field of front-end development will be among the featured
