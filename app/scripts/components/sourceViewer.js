@@ -4,7 +4,7 @@ $(document).ready(function () {
   $.ajax(document.location.pathname)
     .then(function (html) {
       var $sourceElement = $('.source-viewer > code');
-      $sourceElement.text(html);
+      $sourceElement.attr('content', html);
       Prism.highlightElement($sourceElement.get(0), false);
     });
 
