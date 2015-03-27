@@ -5,6 +5,10 @@
   color: $color-white;
   text-align: center;
 
+  @include js-mobile() {
+    margin-top: 200px;
+  }
+
   .inner {
     padding: $footer-padding 0;
 
@@ -31,7 +35,7 @@
     letter-spacing: 3px;
   }
 
-  .email, .twitter {
+  .email, .twitter, .facebook {
     font-size: $footer-email-font-size;
     font-weight: $footer-email-font-weight;
     letter-spacing: $footer-email-letter-spacing;
@@ -42,7 +46,7 @@
     @include animated-link($color-white, -8px);
   }
 
-  .twitter img {
+  .twitter img, .facebook img {
     width: 32px;
     height: 32px;
   }

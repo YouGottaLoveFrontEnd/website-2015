@@ -28,16 +28,24 @@
 
 #speakers {
 	width: 50%;
+
+	@include js-mobile() {
+		width: 88%;
+	}
 }
 
 .speakers {
-	@include margin-vertical($speaker-vertical-spacing);
 	font-size: 0;
 	position: absolute;
 	width: 90%;
 	left: 19%;
 	box-shadow: 7px 4px 46px 1px rgba(0, 0, 0, 0.27);
 	margin-top: 150px;
+
+	@include js-mobile() {
+		@include margin-vertical($speaker-vertical-spacing);
+		left: 8%;
+	}
 }
 
 .speaker {

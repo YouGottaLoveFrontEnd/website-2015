@@ -2,6 +2,10 @@
   position: relative;
   padding-bottom: 400px;
 
+  @include js-mobile() {
+    padding-bottom: 500px;
+  }
+
   @include respond-to("down to tablet") {
   	width: 50%;
     right: 5%;
@@ -27,6 +31,10 @@
 
   .venue-directions {
     margin: 30px 0 140px;
+
+    @include js-mobile() {
+      margin: 30px 0 30px;
+    }
   }
 
   .venue-map {
@@ -35,6 +43,11 @@
     height: 450px;
     left: 14%;
     @include box-shadow(7px 4px 46px 1px rgba(0,0,0,0.27));
+
+    @include js-mobile() {
+      width: 85%;
+      left: 8%;
+    }
 
     iframe {
       width: 100%;

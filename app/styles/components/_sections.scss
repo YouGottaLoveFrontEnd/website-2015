@@ -14,6 +14,7 @@
 
 	@include respond-to("mobile") {
 		width: 88%;
+		line-height: $section-mobile-line-height;
 	}
 
     &:first-child {
@@ -96,6 +97,10 @@ section.section:nth-of-type(even){
 
 section.section:nth-of-type(odd){
 	left: -5%;
+
+	@include js-mobile() {
+		left: 0%;
+	}
 
 	& + .section-illustration {
 		right: 0%;

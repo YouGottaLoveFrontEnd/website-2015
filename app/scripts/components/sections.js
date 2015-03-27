@@ -3,12 +3,19 @@
 'use strict';
 
 $(document).ready(function () {
+  var speakersBlocksHeight = $('.speakers').height();
+
+  if (!isMobile) {
+    speakersBlocksHeight -= 100;
+  } else {
+    speakersBlocksHeight += 50;
+  }
+
+  $('#speakers').css('padding-bottom', speakersBlocksHeight);
+
   if (isMobile) {
     return;
   }
-
-  var speakersBlocksHeight = $('.speakers').height();
-  $('#speakers').css('padding-bottom', speakersBlocksHeight-100);
 
   var scenes = [],
     controller = new ScrollMagic.Controller(),

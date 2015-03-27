@@ -1,8 +1,11 @@
 .content {
-  max-height: 12rem;
   overflow: hidden;
   transition: max-height 1s;
   font-weight: 300;
+
+  .should-collapse {
+    display: none;
+  }
 }
 .expand {
   max-height: 1000px;

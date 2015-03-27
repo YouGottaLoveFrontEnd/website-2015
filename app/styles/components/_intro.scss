@@ -33,6 +33,7 @@
 
     @include js-mobile() {
       opacity: 1;
+      letter-spacing: 1px;
     }
 
     @include respond-to("mobile") {

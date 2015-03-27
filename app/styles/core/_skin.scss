@@ -1,7 +1,7 @@
 // Define responsive font-size. From now we're using only REMs or %.
 html {
 	@include respond-to("mobile") {
-		font-size: 10px;
+		font-size: 12px;
 	}
 
 	@include respond-to("phablet") {
