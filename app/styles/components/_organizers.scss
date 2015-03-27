@@ -65,3 +65,19 @@
   bottom: 0;
   height: 92%;
 }
+
+.contact-us {
+  margin-top: 25px;
+  font-size: 0.9rem;
+  font-weight: 300;
+
+  .title {
+    font-weight: 400;
+  }
+}
+
+.contact-us-link {
+  text-decoration: none;
+  color: $color-green;
+  @include animated-link($color-green, 6px);
+}

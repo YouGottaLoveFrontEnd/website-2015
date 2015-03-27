@@ -7,3 +7,7 @@
 .clearfix {
 	@include clearfix();
 }
+
+.underline {
+  text-decoration: underline;
+}

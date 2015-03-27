@@ -1,6 +1,6 @@
 #registration {
   @include respond-to("down to tablet") {
-  	width: 55%;
+    width: 55%;
   }
 
   .tickets {
@@ -49,7 +49,7 @@
         }
 
         @include js-mobile() {
-		  display: none;
+          display: none;
         }
       }
     }
@@ -126,26 +126,27 @@
 
   .ticket-note {
     text-align: center;
-    font-size:0.9rem;
+    font-size: 0.9rem;
     color: $color-green;
     font-weight: 300;
     letter-spacing: 1px;
     word-spacing: 1px;
   }
 
-  .benefits-list {
-    list-style-type: square;
-    margin-left: 3%;
-    font-size: 1rem;
+  .additional-info {
+    font-size: 0.9rem;
     font-weight: 300;
 
-    li {
-      padding-left: 1%;
+    .item {
+      margin-bottom: 20px;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
     }
-  }
 
-  .benefits-title {
-    font-size: 1rem;
-    font-weight: 300;
+    .title {
+      font-weight: 400;
+    }
   }
 }
