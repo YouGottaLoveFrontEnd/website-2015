@@ -1,4 +1,4 @@
-# YouGottaLoveFrontEnd [![Build Status](https://secure.travis-ci.org/YouGottaLoveFrontEnd/website-2015.svg?branch=master)](https://travis-ci.org/YouGottaLoveFrontEnd/website-2015)
+# You Gotta Love Frontend [![Build Status](https://secure.travis-ci.org/YouGottaLoveFrontEnd/website-2015.svg?branch=master)](https://travis-ci.org/YouGottaLoveFrontEnd/website-2015)
 
 **TL;DR**
 
@@ -21,12 +21,12 @@ all be in the same place at the same time.  This conference – and its future e
 way for the international community and its leaders to get to know Israel’s rising front-end
 development community and vice versa.
 
-YouGottaLoveFrontEnd will also provide a fun, energized atmosphere in which the field’s freshest minds can share
+You Gotta Love Frontend will also provide a fun, energized atmosphere in which the field’s freshest minds can share
 their experiences, creative ideas and latest technologies – over pints of beer. With conference
 participation expected to reach 700 attendees, like-minded developers will find an enriching
 opportunity to interact with each other, learn from one another and establish a professional
 network of communication.
 
-Created by Israel’s top front-end developers specifically for front-end developers, YouGottaLoveFrontEnd, and its
+Created by Israel’s top front-end developers specifically for front-end developers, You Gotta Love Frontend, and its
 jam-packed schedule of high-quality content, promises to be the industry’s most worthwhile
 and value-adding conference to attend (and did we mention there’ll be beer?)
