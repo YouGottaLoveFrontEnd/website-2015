@@ -6,20 +6,21 @@ $(document).ready(function () {
   var elements = {
     content: section.find('.content'),
     expand: section.find('a[data-action="open"]'),
-    collapse: section.find('a[data-action="close"]')
+    collapse: section.find('a[data-action="close"]'),
+    moreInfo: section.find('.should-collapse')
   };
 
   function expand() {
-    elements.content.addClass(EXPAND_CLASS);
     elements.expand.hide();
+    elements.moreInfo.addClass(EXPAND_CLASS);
   }
 
   function collapse() {
-    elements.content.removeClass(EXPAND_CLASS);
+    elements.moreInfo.removeClass(EXPAND_CLASS);
     elements.expand.show();
   }
 
-  elements.expand.bind('click', expand);
-  elements.collapse.bind('click', collapse);
+  elements.expand.on('click', expand);
+  elements.collapse.on('click', collapse);
 
 });
