@@ -3,125 +3,125 @@
 // ======================================================================
 
 @mixin speaker-size($items-per-row, $margin: 0) {
-	@include margin-horizontal(if($items-per-row == 1, 0, $margin / 2));
-	width: if($items-per-row == 1, 100%, (100% / $items-per-row) - $margin);
+  @include margin-horizontal(if($items-per-row == 1, 0, $margin / 2));
+  width: if($items-per-row == 1, 100%, (100% / $items-per-row) - $margin);
 }
 
 @each $breakpoint, $items-per-row in $speaker-sizes {
-	@include respond-to($breakpoint) {
-		@if ($items-per-row > 1) {
-			.speakers {
-				@include margin-horizontal($speaker-horizontal-spacing / -2);
-			}
-		}
+  @include respond-to($breakpoint) {
+    @if ($items-per-row > 1) {
+      .speakers {
+        @include margin-horizontal($speaker-horizontal-spacing / -2);
+      }
+    }
 
-		.speaker {
-			@include speaker-size($items-per-row);
-		}
-	}
+    .speaker {
+      @include speaker-size($items-per-row);
+    }
+  }
 }
-
 
 // ======================================================================
 // =| Component |========================================================
 // ======================================================================
 
 #speakers {
-	width: 50%;
+  width: 50%;
 
-	@include js-mobile() {
-		width: 88%;
-	}
+  @include js-mobile() {
+    width: 88%;
+  }
 }
 
 .speakers {
-	font-size: 0;
-	position: absolute;
-	width: 90%;
-	left: 19%;
-	box-shadow: 7px 4px 46px 1px rgba(0, 0, 0, 0.27);
-	margin-top: 150px;
+  font-size: 0;
+  position: absolute;
+  width: 90%;
+  left: 19%;
+  box-shadow: 7px 4px 46px 1px rgba(0, 0, 0, 0.27);
+  margin-top: 150px;
 
-	@include js-mobile() {
-		@include margin-vertical($speaker-vertical-spacing);
-		left: 8%;
-	}
+  @include js-mobile() {
+    @include margin-vertical($speaker-vertical-spacing);
+    left: 8%;
+  }
 }
 
 .speaker {
-	position: relative;
-	display: inline-block;
-	text-align: left;
-	vertical-align: top;
-	font-size: $speaker-font-size;
+  position: relative;
+  display: inline-block;
+  text-align: left;
+  vertical-align: top;
+  font-size: $speaker-font-size;
 
-	@include respond-to("down to tablet") {
-		font-size: $speaker-font-size * 0.6;
-	}
+  @include respond-to("down to tablet") {
+    font-size: 0.9rem;
+  }
 
-	&:not(.speaker-placeholder):hover {
-		.speaker-details {
-			height: calc(100% - 2rem);
-		}
-		.speaker-bio {
-			opacity: 1;
-		}
-		.speaker-image {
-			-webkit-filter: grayscale(0%);
-			-moz-filter: grayscale(0%);
-			filter: grayscale(0%);
-		}
-	}
+  &:not(.speaker-placeholder):hover {
+    .speaker-details {
+      height: calc(100% - 2rem);
+    }
+    .speaker-bio {
+      opacity: 1;
+    }
+    .speaker-image {
+      -webkit-filter: grayscale(0%);
+      -moz-filter: grayscale(0%);
+      filter: grayscale(0%);
+    }
+  }
 }
 
 .speaker-image {
-	width: 100%;
-	display: block;
-	-webkit-filter: grayscale(100%);
-	-moz-filter: grayscale(100%);
-	filter: grayscale(100%);
-	transition: -webkit-filter 500ms ease-out,
-				-moz-filter 500ms ease-out,
-				filter 500ms ease-out;
+  width: 100%;
+  display: block;
+  -webkit-filter: grayscale(100%);
+  -moz-filter: grayscale(100%);
+  filter: grayscale(100%);
+  transition: -webkit-filter 500ms ease-out,
+  -moz-filter 500ms ease-out,
+  filter 500ms ease-out;
 }
 
 .speaker-details {
-	@include padding-horizontal($speaker-horizontal-padding);
-	position: absolute;
-	bottom: 0;
-	width: calc(100% - 2rem);
-	background: rgba(255, 255, 255, 0.95);
-	margin: 1rem;
-	height: $speaker-details-collapsed-height;
-	overflow: hidden;
-	box-sizing: border-box;
-	transition: height 200ms ease-out;
+  @include padding-horizontal($speaker-horizontal-padding);
+  position: absolute;
+  bottom: 0;
+  width: calc(100% - 2rem);
+  background: rgba(255, 255, 255, 0.95);
+  margin: 1rem;
+  height: $speaker-details-collapsed-height;
+  overflow: hidden;
+  box-sizing: border-box;
+  transition: height 200ms ease-out;
 
-	> * {
-		@include margin-vertical($speaker-header-inner-vertical-spacing);
-	}
+  > * {
+    @include margin-vertical($speaker-header-inner-vertical-spacing);
+  }
 }
 
 .speaker-name {
-	text-transform: uppercase;
-	font-size: $speaker-name-font-size;
-	position: relative;
-	padding-bottom: 0.5rem;
+  text-transform: uppercase;
+  font-size: $speaker-name-font-size;
+  position: relative;
+  padding-bottom: 0.5rem;
 
-	&:after {
-		@include pseudo-element($speaker-header-hr-width, $speaker-header-hr-height);
-		@include position(absolute, nil, nil, 0, 0);
-		background: $speaker-header-hr-background;
-	}
+  &:after {
+    @include pseudo-element($speaker-header-hr-width, $speaker-header-hr-height);
+    @include position(absolute, nil, nil, 0, 0);
+    background: $speaker-header-hr-background;
+  }
 }
 
 .speaker-bio {
-    font-family: "futura-pt",sans-serif;
-    font-style: normal;
-    font-weight: 300;
-	opacity: 0;
-	transition: opacity 150ms 150ms ease-in;
-	line-height: 1rem;
+  font-family: "futura-pt", sans-serif;
+  font-style: normal;
+  font-weight: 300;
+  opacity: 0;
+  transition: opacity 150ms 150ms ease-in;
+  line-height: 1rem;
+  font-size: 0.7rem;
 
   a {
     color: $color-green;
@@ -130,25 +130,25 @@
 }
 
 .speaker-placeholder {
-	.speaker-placeholder-image {
-        background-color: #00d09d;
-		display: block;
-		padding-top: 100%; 	/* initial ratio of 1:1*/
-	}
-	.speaker-placeholder-text {
-		position: absolute;
-		top: 0;
-		right: 0;
-		bottom: 0;
-		left: 0;
-		padding: 30px;
-		font-size: 2rem;
-		text-transform: uppercase;
-		color: #FFF;
+  .speaker-placeholder-image {
+    background-color: #00d09d;
+    display: block;
+    padding-top: 100%; /* initial ratio of 1:1*/
+  }
+  .speaker-placeholder-text {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    padding: 30px;
+    font-size: 2rem;
+    text-transform: uppercase;
+    color: #FFF;
 
-		.word {
-			display: block;
-			line-height: 2.5rem;
-		}
-	}
+    .word {
+      display: block;
+      line-height: 2.5rem;
+    }
+  }
 }

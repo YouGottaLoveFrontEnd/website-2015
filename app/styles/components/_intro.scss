@@ -8,6 +8,10 @@
   text-transform: uppercase;
   font-size: $intro-font-size;
 
+  @include respond-to("mobile") {
+    font-size: 2rem;
+  }
+
   @include js-mobile() {
     min-height: 0;
   }
@@ -16,6 +20,11 @@
     @include position(absolute, 50%, nil, nil, 50%);
     @include translate(-50%, -50%);
     width: 100%;
+
+    @include respond-to("mobile") {
+      top: 42%;
+      width: auto;
+    }
   }
 
   %title {
@@ -35,15 +44,15 @@
       opacity: 1;
       letter-spacing: 1px;
     }
-
-    @include respond-to("mobile") {
-      font-size: $intro-title-subtitle-font-size * 0.9;
-    }
   }
 
   .actions {
     margin-top: 15px;
     bottom: -7%;
+
+    @include respond-to("mobile") {
+      margin-top: 0;
+    }
 
     .button {
       border-color: $color-white;
@@ -52,6 +61,13 @@
       background-color: $color-white;
       color: $color-green;
       width: 8.5rem;
+
+      @include respond-to("mobile") {
+        margin: 1% 0;
+        width: 100%;
+        @include box-sizing(border-box);
+        padding: 1rem;
+      }
 
       &:after {
         background-color: transparent;
@@ -64,10 +80,12 @@
         }
       }
 
-      &:last-child {
-        margin-left: 10px;
-        padding: 1rem;
-        width: 12.5rem;
+      @include respond-to("down to phablet") {
+        &:last-child {
+          margin-left: 10px;
+          padding: 1rem;
+          width: 12.5rem;
+        }
       }
     }
   }
@@ -82,6 +100,10 @@
   display: inline-block;
   padding: $intro-logo-padding;
   letter-spacing: $intro-logo-letter-spacing;
+
+  @include respond-to("mobile") {
+    padding: 5%;
+  }
 
   a {
     display: block;
