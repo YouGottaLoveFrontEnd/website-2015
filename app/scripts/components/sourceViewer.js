@@ -5,7 +5,6 @@ $(document).ready(function () {
     .then(function (html) {
       var $sourceElement = $('.source-viewer > code');
       $sourceElement.attr('content', html);
-      Prism.highlightElement($sourceElement.get(0), false);
     });
 
   var scenes = [],
