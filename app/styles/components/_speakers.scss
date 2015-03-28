@@ -123,32 +123,18 @@
   line-height: 1rem;
   font-size: 0.7rem;
 
+  @include respond-to("mobile") {
+    font-size: 0.9rem;
+  }
+
   a {
     color: $color-green;
     @include animated-link($color-green, 4px);
   }
 }
 
-.speaker-placeholder {
-  .speaker-placeholder-image {
-    background-color: #00d09d;
-    display: block;
-    padding-top: 100%; /* initial ratio of 1:1*/
-  }
-  .speaker-placeholder-text {
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    padding: 30px;
-    font-size: 2rem;
-    text-transform: uppercase;
-    color: #FFF;
-
-    .word {
-      display: block;
-      line-height: 2.5rem;
-    }
-  }
+.speaker-placeholder-image {
+  background-color: #00d09d;
+  display: block;
+  padding-top: 100%; /* initial ratio of 1:1*/
 }
