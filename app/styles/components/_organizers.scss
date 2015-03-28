@@ -1,5 +1,9 @@
 #organizers {
-  padding-bottom: 18%;
+  padding-bottom: 20%;
+
+  @include respond-to("up to phablet") {
+    padding-bottom: 40%;
+  }
 }
 
 .organizers-text {
@@ -12,7 +16,11 @@
   bottom: 0;
   right: -5%;
   width: 85%;
-  height: 33%;
+  height: 32%;
+
+  @include respond-to("up to phablet") {
+    height: 25%;
+  }
 }
 
 .organizer {
@@ -34,6 +42,7 @@
   position: absolute;
   bottom: 100%;
   padding: 8% 12%;
+  min-width: 100%;
   display: none;
   text-align: center;
   white-space: nowrap;
