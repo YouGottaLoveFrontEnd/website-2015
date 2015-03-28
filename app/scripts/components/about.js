@@ -10,17 +10,19 @@ $(document).ready(function () {
     moreInfo: section.find('.should-collapse')
   };
 
-  function expand() {
+  function expand(ev) {
+    ev.preventDefault();
     elements.expand.hide();
     elements.moreInfo.addClass(EXPAND_CLASS);
   }
 
-  function collapse() {
+  function collapse(ev) {
+    ev.preventDefault();
     elements.moreInfo.removeClass(EXPAND_CLASS);
     elements.expand.show();
   }
 
-  elements.expand.on('click', expand);
-  elements.collapse.on('click', collapse);
+  elements.expand.on('touchstart click', expand);
+  elements.collapse.on('touchstart click', collapse);
 
 });
