@@ -29,6 +29,7 @@
 @mixin animated-link($color: $color-white, $bottom: 0) {
   position: relative;
   display: inline-block;
+  text-decoration: none;
 
   &:before {
     content: "";

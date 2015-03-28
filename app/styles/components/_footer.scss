@@ -40,7 +40,6 @@
     font-weight: $footer-email-font-weight;
     letter-spacing: $footer-email-letter-spacing;
     color: $color-white;
-    text-decoration: none;
     display: block;
     margin-top: 0;
     @include animated-link($color-white, -8px);

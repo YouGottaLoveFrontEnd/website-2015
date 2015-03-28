@@ -59,7 +59,6 @@
 }
 
 .organizer-link {
-  text-decoration: none;
   color: $color-green;
   @include animated-link($color-green, 6px);
   font-weight: 300;
@@ -84,7 +83,6 @@
 }
 
 .contact-us-link {
-  text-decoration: none;
   color: $color-green;
   @include animated-link($color-green, 6px);
 }

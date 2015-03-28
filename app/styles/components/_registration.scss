@@ -5,7 +5,7 @@
 
   .tickets {
     @include clearfix();
-    margin-bottom: 5%;
+    margin-bottom: 3%;
     padding-top: 5%;
   }
 
@@ -131,6 +131,17 @@
     font-weight: 300;
     letter-spacing: 1px;
     word-spacing: 1px;
+  }
+
+  .tickets-checkout {
+    margin-bottom: 20px;
+    font-weight: 300;
+    font-size: 0.9rem;
+
+    a {
+      color: $color-green;
+      @include animated-link($color-green, 6px);
+    }
   }
 
   .additional-info {
