@@ -61,6 +61,7 @@
   &:not(.speaker-placeholder):hover {
     .speaker-details {
       height: calc(100% - 2rem);
+      overflow: auto;
     }
     .speaker-bio {
       opacity: 1;
