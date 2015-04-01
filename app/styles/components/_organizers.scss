@@ -20,7 +20,15 @@
 
   @include respond-to("up to phablet") {
     height: 25%;
+    width: 90%;
+    right: 15%;
   }
+
+  @include respond-to("mobile") {
+    height: 20%;
+    right: 11%;
+  }
+
 }
 
 .organizer {
@@ -77,6 +85,10 @@
 
   .title {
     font-weight: 400;
+  }
+
+  p {
+    padding-bottom: 30px;
   }
 }
 
