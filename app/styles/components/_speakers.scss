@@ -47,12 +47,10 @@
   }
 
    @include respond-to("up to phablet") {
-    left: 5% !important;
+    left: 5% ;
   }
 
-  @include respond-to("mobile") {
-    left: 5% !important;
-  }
+  
 }
 
 .speaker {
