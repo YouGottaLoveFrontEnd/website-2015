@@ -4,7 +4,6 @@
 
   @include js-mobile() {
     width: 88%;
-    padding-bottom: 0;
   }
 
   .coming-soon {
@@ -22,6 +21,11 @@
     background: white;
     font-size: 0.8rem;
     @include box-shadow(7px 4px 46px 1px rgba(0,0,0,0.27));
+
+    @include js-mobile() {
+      width: 85%;
+      padding: 0;
+    }
 
     .schedule-nav-item {
       -webkit-appearance: none;
@@ -72,6 +76,26 @@
       .schedule-tables-container {
         width: 200%;
         transition: transform 250ms;
+      }
+    }
+
+    .schedule-table, .schedule-inner-table {
+      tr:first-child {
+        td:first-child time {
+          display: none;
+          color: transparentize($color-black, 0.5);
+
+          @include js-mobile() {
+            display: block;
+          }
+        }
+
+        td:nth-child(2) {
+          @include js-mobile() {
+            width: 0;
+            overflow: hidden;
+          }
+        }
       }
     }
 
