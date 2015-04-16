@@ -45,6 +45,12 @@
     @include margin-vertical($speaker-vertical-spacing);
     left: 8%;
   }
+
+   @include respond-to("up to phablet") {
+    left: 5% ;
+  }
+
+  
 }
 
 .speaker {
