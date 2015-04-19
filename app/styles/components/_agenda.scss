@@ -1,0 +1,19 @@
+#agenda {
+    .agenda-article {
+        margin-bottom: 30px;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+    .agenda-speaker-name {
+        font-weight: normal;
+    }
+    h4 {
+        text-transform: uppercase;
+    }
+    p {
+        font-size: 18px;
+        line-height: 26px;
+    }
+}

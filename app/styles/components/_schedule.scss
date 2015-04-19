@@ -80,21 +80,19 @@
     }
 
     .schedule-table, .schedule-inner-table {
-      tr:first-child {
-        td:first-child time {
-          display: none;
-          color: transparentize($color-black, 0.5);
+      td:first-child time {
+        display: none;
+        color: transparentize($color-black, 0.5);
 
-          @include js-mobile() {
-            display: block;
-          }
+        @include js-mobile() {
+          display: block;
         }
+      }
 
-        td:nth-child(2) {
-          @include js-mobile() {
-            width: 0;
-            overflow: hidden;
-          }
+      td:nth-child(2) {
+        @include js-mobile() {
+          width: 0;
+          overflow: hidden;
         }
       }
     }
