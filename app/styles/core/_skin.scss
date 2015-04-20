@@ -21,3 +21,8 @@ body {
 	font-family: $skin-font-family;
 	background: $skin-background;
 }
+
+.link {
+  color: $color-green;
+  @include animated-link($color-green, 6px);
+}
