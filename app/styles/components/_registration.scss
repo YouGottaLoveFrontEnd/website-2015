@@ -3,16 +3,38 @@
     width: 55%;
   }
 
+  .sold-out {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    &:after {
+      content: 'Sold Out';
+      position: absolute;
+      background-color: $color-green;
+      transform: rotate(-9deg);
+      text-align: center;
+      width: 110%;
+      top: 35%;
+      left: -5%;
+      color: $color-white;
+      font-weight: 200;
+      letter-spacing: 0.1em;
+    }
+  }
+
   .tickets {
     @include clearfix();
     margin-bottom: 3%;
     padding-top: 5%;
+    padding-left: 3%;
   }
 
   .ticket {
     width: 42%;
     max-width: 400px;
     float: left;
+    position: relative;
 
     &:nth-child(2) {
       float: left;

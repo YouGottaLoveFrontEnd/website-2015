@@ -8,6 +8,11 @@
 
   .coming-soon {
     font-weight: 300;
+
+    a {
+      color: $color-green;
+      @include animated-link($color-green, 6px);
+    }
   }
 
   h2 {

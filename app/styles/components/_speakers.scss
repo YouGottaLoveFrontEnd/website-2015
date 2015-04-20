@@ -72,6 +72,14 @@
       filter: grayscale(0%);
     }
   }
+
+  &.full-width-speaker {
+    width: 100%;
+
+    .speaker-placeholder-image {
+      padding-top: 25%;
+    }
+  }
 }
 
 .speaker-image {
