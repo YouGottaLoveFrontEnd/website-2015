@@ -1,0 +1,88 @@
+#agenda {
+    .agenda-article {
+        @include transition(background 500ms);
+        margin-bottom: 30px;
+        padding: 10px 15px;
+        border-radius: 5px;
+        position: relative;
+
+        &.expanded .agenda-abstract {
+            max-height: 1000px;
+        }
+
+        body:not(.mobile) &:hover {
+            @include transition(background 250ms);
+            background: transparentize($color-green, 0.75);
+
+            &:after {
+                @include transition(opacity 250ms);
+                opacity: 0;
+            }
+
+            .agenda-abstract {
+                @include transition(max-height 500ms);
+                max-height: 1000px;
+            }
+        }
+
+        &:after {
+            @include transition(opacity 500ms);
+            content: 'Hover to see more...';
+            position: absolute;
+            height: 25px;
+            left: 15px;
+            bottom: -15px;
+            right: 0;
+            color: #00D09D;
+            text-decoration: none;
+            line-height: 25px;
+            font-size: 18px;
+
+            @include js-mobile() {
+                content: 'Read more...';
+            }
+        }
+    }
+
+    .agenda-speaker-name {
+        font-weight: normal;
+
+        @include js-mobile() {
+            display: block;
+            font-weight: bold;
+        }
+
+        &:after {
+            content: ' | ';
+
+            @include js-mobile() {
+                content: none;
+            }
+        }
+
+    }
+
+    .agenda-talk-title {
+        @include js-mobile() {
+            display: block;
+
+            &:after {
+                content: '';
+                display: block;
+                width: 20%;
+                height: 1px;
+                background: $color-black;
+                margin-top: 5px;
+                margin-bottom: 10px;
+            }
+        }
+    }
+
+    .agenda-abstract {
+        @include transition(max-height 250ms);
+        font-size: 18px;
+        line-height: 26px;
+        max-height: 55px;
+        overflow: hidden;
+    }
+}

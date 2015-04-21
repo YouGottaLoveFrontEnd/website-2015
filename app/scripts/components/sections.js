@@ -13,6 +13,20 @@ $(document).ready(function () {
 
   $('#speakers').css('padding-bottom', speakersBlocksHeight);
 
+  var scheduleHeight = $('.schedule-timetable').height();
+
+  if (!isMobile) {
+    scheduleHeight += 200;
+  } else {
+    scheduleHeight += 100;
+  }
+
+  $('#schedule').css('padding-bottom', scheduleHeight);
+
+  $('.agenda-article').on('click', function() {
+    $(this).toggleClass('expanded');
+  });
+
   if (isMobile) {
     return;
   }

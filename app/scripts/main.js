@@ -26,6 +26,10 @@ $(document).ready(function () {
   $('body')
     .addClass('ready')
     .toggleClass('mobile', isMobile);
+
+  // TODO: delete next 2 lines to publish schedule
+  $('#schedule').remove();
+  $('.nav-item > a[href=#schedule]').parent().remove();
 });
 
 $(window).load(function() {
