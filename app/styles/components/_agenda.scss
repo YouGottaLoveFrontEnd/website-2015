@@ -2,8 +2,7 @@
     .agenda-article {
         @include transition(background 500ms);
         margin-bottom: 30px;
-        padding: 10px 15px;
-        border-radius: 5px;
+        padding: 15px 20px;
         position: relative;
 
         &.expanded {
@@ -33,16 +32,19 @@
 
         &:after {
             @include transition(opacity 500ms);
-            content: 'Hover to see more...';
+            @include transition-delay(100ms);
+            @include background-image(linear-gradient(to bottom, rgba(255, 255, 255, 0) -75%, #FFF 50%));
+            content: 'Hover to see more';
             position: absolute;
-            height: 25px;
-            left: 15px;
-            bottom: -15px;
+            height: 50px;
+            left: 20px;
+            bottom: -10px;
             right: 0;
-            color: #00D09D;
+            color: $color-green;
             text-decoration: none;
-            line-height: 25px;
+            line-height: 75px;
             font-size: 18px;
+            z-index: 1;
 
             @include js-mobile() {
                 content: 'Read more...';
@@ -86,9 +88,17 @@
 
     .agenda-abstract {
         @include transition(max-height 250ms);
+        display: block;
         font-size: 18px;
         line-height: 26px;
-        max-height: 55px;
+        max-height: 75px;
         overflow: hidden;
+    }
+
+    .agenda-abstract {
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+        text-overflow: ellipsis;
     }
 }
