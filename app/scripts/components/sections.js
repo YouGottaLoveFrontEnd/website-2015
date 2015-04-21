@@ -23,6 +23,10 @@ $(document).ready(function () {
 
   $('#schedule').css('padding-bottom', scheduleHeight);
 
+  $('.agenda-article').on('click', function() {
+    $(this).toggleClass('expanded');
+  });
+
   if (isMobile) {
     return;
   }
