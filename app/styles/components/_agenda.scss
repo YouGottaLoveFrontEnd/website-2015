@@ -6,8 +6,14 @@
         border-radius: 5px;
         position: relative;
 
-        &.expanded .agenda-abstract {
-            max-height: 1000px;
+        &.expanded {
+            &:after {
+                opacity: 0;
+            }
+
+            .agenda-abstract {
+                max-height: 1000px;
+            }
         }
 
         body:not(.mobile) &:hover {
