@@ -59,8 +59,6 @@
 }
 
 .organizer-link {
-  color: $color-green;
-  @include animated-link($color-green, 6px);
   font-weight: 300;
   font-size: 0.9rem;
   letter-spacing: 1px;
@@ -78,9 +76,4 @@
   .title {
     font-weight: 400;
   }
-}
-
-.contact-us-link {
-  color: $color-green;
-  @include animated-link($color-green, 6px);
 }

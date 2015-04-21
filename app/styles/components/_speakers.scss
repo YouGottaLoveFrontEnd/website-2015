@@ -137,8 +137,7 @@
     font-size: 0.9rem;
   }
 
-  a {
-    color: $color-green;
+  .link {
     @include animated-link($color-green, 4px);
   }
 }
