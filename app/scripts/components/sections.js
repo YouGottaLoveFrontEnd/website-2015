@@ -21,7 +21,7 @@ $(document).ready(function () {
     scheduleHeight += 100;
   }
 
-  $('#schedule').css('padding-bottom', scheduleHeight);
+  //$('#schedule').css('padding-bottom', scheduleHeight);
 
   if (isMobile) {
     $('.agenda-article').on('click', function() {
