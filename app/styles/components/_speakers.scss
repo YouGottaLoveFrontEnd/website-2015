@@ -26,7 +26,7 @@
 // ======================================================================
 
 #speakers {
-  width: 50%;
+  // width: 50%;
 
   @include js-mobile() {
     width: 88%;
@@ -130,15 +130,14 @@
   font-weight: 300;
   opacity: 0;
   transition: opacity 350ms 350ms ease-in-out;
-  line-height: 1rem;
-  font-size: 0.7rem;
+  line-height: 1.2rem;
 
-  @include respond-to("mobile") {
+  @include respond-to("up to tablet") {
     font-size: 0.9rem;
   }
 
   .link {
-    @include animated-link($color-green, 4px);
+    @include animated-link($color-green, -1px);
   }
 }
 
