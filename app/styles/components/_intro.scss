@@ -1,159 +1,204 @@
 .intro {
-  @include brand-gradient();
-  height: 100%;
-  min-height: 800px;
-  position: relative;
-  color: $color-white;
-  text-align: center;
-  text-transform: uppercase;
-  font-size: $intro-font-size;
-
-  @include respond-to("mobile") {
-    font-size: 2rem;
-  }
-
-  @include js-mobile() {
-    min-height: 0;
-  }
-
-  .inner {
-    @include position(absolute, 50%, nil, nil, 50%);
-    @include translate(-50%, -50%);
-    width: 100%;
+    @include brand-gradient();
+    height: 100%;
+    min-height: 800px;
+    position: relative;
+    color: $color-white;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: $intro-font-size;
 
     @include respond-to("mobile") {
-      top: 42%;
-      width: auto;
+        font-size: 2rem;
     }
-  }
-
-  %title {
-    @include position(absolute, nil, nil, nil, 50%);
-    width: 100%;
-  }
-
-  .subtitle {
-    @extend %title;
-    @include translate(-50%, 100%);
-    font-size: $intro-title-subtitle-font-size;
-    top: $intro-title-offset;
-    letter-spacing: 3px;
-    opacity: 0;
 
     @include js-mobile() {
-      opacity: 1;
-      letter-spacing: 1px;
-    }
-  }
-
-  .actions {
-    margin-top: 15px;
-    bottom: -7%;
-
-    @include respond-to("mobile") {
-      margin-top: 0;
+        min-height: 0;
     }
 
-    .button {
-      border-color: $color-white;
-      padding: $button-action-spacing-vertical $button-action-spacing-horizontal;
-      font-size: $button-action-font-size;
-      background-color: $color-white;
-      color: $color-green;
-      width: 8.5rem;
-
-      @include respond-to("mobile") {
-        margin: 1% 0;
+    .inner {
+        @include position(absolute, 50%, nil, nil, 50%);
+        @include translate(-50%, -50%);
         width: 100%;
-        @include box-sizing(border-box);
-        padding: 1rem;
-      }
 
-      &:after {
-        background-color: transparent;
-      }
-
-      &:hover {
-        color: $color-white;
-        &:after {
-          background-color: $color-green;
+        @include respond-to("mobile") {
+            top: 42%;
+            width: auto;
         }
-      }
-
-      @include respond-to("down to phablet") {
-        &:last-child {
-          margin-left: 10px;
-          padding: 1rem;
-          width: 12.5rem;
-        }
-      }
     }
-  }
+
+    %title {
+        @include position(absolute, nil, nil, nil, 50%);
+        width: 100%;
+    }
+
+    .subtitle {
+        @extend %title;
+        @include translate(-50%, 100%);
+        font-size: $intro-title-subtitle-font-size;
+        top: $intro-title-offset;
+        letter-spacing: 3px;
+        opacity: 0;
+
+        @include js-mobile() {
+            opacity: 1;
+            letter-spacing: 1px;
+        }
+    }
+
+    .actions {
+        margin-top: 15px;
+        bottom: -7%;
+
+        @include respond-to("mobile") {
+            margin-top: 0;
+        }
+
+        .button {
+            border-color: $color-white;
+            padding: $button-action-spacing-vertical $button-action-spacing-horizontal;
+            font-size: $button-action-font-size;
+            background-color: $color-white;
+            color: $color-green;
+            width: 8.5rem;
+
+            @include respond-to("mobile") {
+                margin: 1% 0;
+                width: 100%;
+                @include box-sizing(border-box);
+                padding: 1rem;
+            }
+
+            &:after {
+                background-color: transparent;
+            }
+
+            &:hover {
+                color: $color-white;
+                &:after {
+                    background-color: $color-green;
+                }
+            }
+
+            @include respond-to("down to phablet") {
+                &:last-child {
+                    margin-left: 10px;
+                    padding: 1rem;
+                    width: 12.5rem;
+                }
+            }
+        }
+    }
 
 }
 
 .logo {
-  border: solid $border-width;
-  line-height: $intro-logo-line-height;
-  font-size: $intro-logo-font-size;
-  text-align: left;
-  display: inline-block;
-  padding: $intro-logo-padding;
-  letter-spacing: $intro-logo-letter-spacing;
-
-  @include respond-to("mobile") {
-    padding: 5%;
-  }
-
-  a {
-    display: block;
-    text-decoration: none;
-    color: inherit;
-  }
-
-  .word {
-    display: block;
-    white-space: nowrap;
-  }
-
-  .letter {
+    border: solid $border-width;
+    line-height: $intro-logo-line-height;
+    font-size: $intro-logo-font-size;
+    text-align: left;
     display: inline-block;
-    opacity: 0;
-    min-width: 1em;
-    text-align: center;
-    margin-left: -0.3em;
-  }
+    padding: $intro-logo-padding;
+    letter-spacing: $intro-logo-letter-spacing;
 
-  .hide-letter {
-    color: transparent;
-  }
-
-  .will-be-censored {
-    &:after {
-      transition: color 100ms;
-    }
-  }
-
-  .is-censored {
-    position: relative;
-    //		letter-spacing: -0.15em;	// controls the space we're reserving
-
-    &.last-of-censored:after {
-      content: "_";
+    @include respond-to("mobile") {
+        padding: 5%;
     }
 
-    &:after {
-      @include position(absolute, 0, nil, nil, 0);
-      @include transform(translateY(-63%) scaleX(0.85));
-      letter-spacing: normal;
-      content: "___";
-      color: $color-white;
+    a {
+        display: block;
+        text-decoration: none;
+        color: inherit;
     }
-  }
+
+    .word {
+        display: block;
+        white-space: nowrap;
+    }
+
+    .letter {
+        display: inline-block;
+        opacity: 0;
+        min-width: 1em;
+        text-align: center;
+        margin-left: -0.3em;
+    }
+
+    .hide-letter {
+        color: transparent;
+    }
+
+    .will-be-censored {
+        &:after {
+            transition: color 100ms;
+        }
+    }
+
+    .is-censored {
+        position: relative;
+        //		letter-spacing: -0.15em;	// controls the space we're reserving
+
+        &.last-of-censored:after {
+            content: "_";
+        }
+
+        &:after {
+            @include position(absolute, 0, nil, nil, 0);
+            @include transform(translateY(-63%) scaleX(0.85));
+            letter-spacing: normal;
+            content: "___";
+            color: $color-white;
+        }
+    }
 }
 
 .ready {
-  .logo .letter {
-    opacity: 1;
-  }
+    .logo .letter {
+        opacity: 1;
+    }
+}
+
+.corner-ribbon {
+    width: 300px;
+    background: #fff;
+    display: block;
+    position: absolute;
+    top: 25px;
+    left: -50px;
+    text-align: center;
+    font-size: 14px;
+    font-weight: 100;
+    line-height: 20px;
+    padding: 5px;
+    letter-spacing: 1px;
+    color: #1105e7;
+    transform: rotate(-45deg);
+    -webkit-transform: rotate(-45deg);
+    z-index: 10;
+    box-shadow: 0 5px 10px 0 rgba(0,0,0,0.3);
+    overflow: hidden;
+    text-decoration: none;
+    transition: all 250ms;
+
+    &.sticky {
+        position: fixed;
+    }
+
+    &:hover {
+        opacity: 1;
+        box-shadow: none;
+        color: white !important;
+        background: #00d09d;
+    }
+
+    &.top-left {
+        top: 55px;
+        left: -65px;
+        transform: rotate(-45deg);
+        -webkit-transform: rotate(-45deg);
+    }
+
+    @include js-mobile() {
+        display: none;
+    }
 }

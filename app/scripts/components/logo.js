@@ -134,5 +134,17 @@ $(document).ready(function () {
 
   scenes.push(scaleScene);
 
+  var badgeTween = new TimelineMax()
+    .add(TweenMax.to('.corner-ribbon', 1.2, {
+      opacity: 0.9,
+      color: '#00d09d',
+      ease: Power1.easeInOut
+    }));
+
+  var badgeScene = new ScrollMagic.Scene({duration: 200, offset: 700})
+    .setTween(badgeTween);
+
+  scenes.push(badgeScene);
+
   controller.addScene(scenes);
 });
