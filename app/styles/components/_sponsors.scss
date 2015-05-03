@@ -1,0 +1,32 @@
+.sponsors-logo {
+	@include box-sizing(border-box);
+	display: inline-block;
+	float: left;
+	height: 4rem;
+	padding: 1% 2% 4% 2%;
+	width: 33.333%;
+
+	@include respond-to("mobile") {
+		width: 100%;
+	}
+
+	@include respond-to("phablet") {
+		width: 50%;
+	}
+
+	a,
+	img {
+		@include transition(all 600ms);
+		display: block;
+		height: 100%;
+	}
+
+	img {
+		max-width: 100%;
+		margin: 0 auto;
+	}
+
+	a:not(:hover) {
+		@include filter(grayscale(1));
+	}
+}
