@@ -26,8 +26,6 @@
 // ======================================================================
 
 #speakers {
-  // width: 50%;
-
   @include js-mobile() {
     width: 88%;
   }
@@ -105,10 +103,6 @@
   box-sizing: border-box;
   transition: height 500ms cubic-bezier(0.140, 0.875, 0.295, 0.930);
   transition-timing-function: cubic-bezier(0.140, 0.875, 0.295, 0.930);
-
-  > * {
-    @include margin-vertical($speaker-header-inner-vertical-spacing);
-  }
 }
 
 .speaker-name {
@@ -116,6 +110,14 @@
   font-size: $speaker-name-font-size;
   position: relative;
   padding-bottom: 0.5rem;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow-x: hidden;
+
+  .speaker:hover & {
+    white-space: normal;
+    overflow: visible;
+  }
 
   &:after {
     @include pseudo-element($speaker-header-hr-width, $speaker-header-hr-height);
@@ -125,6 +127,7 @@
 }
 
 .speaker-bio {
+  @include margin-vertical($speaker-header-inner-vertical-spacing);
   font-family: "futura-pt", sans-serif;
   font-style: normal;
   font-weight: 300;

@@ -5,9 +5,7 @@
 $(document).ready(function () {
   var speakersBlocksHeight = $('.speakers').height();
 
-  if (!isMobile) {
-    speakersBlocksHeight -= 100;
-  } else {
+  if (isMobile) {
     speakersBlocksHeight += 50;
   }
 
