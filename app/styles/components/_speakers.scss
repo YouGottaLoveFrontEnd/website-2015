@@ -26,6 +26,7 @@
 // ======================================================================
 
 #speakers {
+  width: 75%;
   @include js-mobile() {
     width: 88%;
   }
@@ -71,11 +72,18 @@
     }
   }
 
-  &.full-width-speaker {
+  &.full-width {
     width: 100%;
 
     .speaker-placeholder-image {
       padding-top: 25%;
+    }
+  }
+  &.two-thirds-width {
+    width: 66.666%;
+
+    .speaker-placeholder-image {
+      padding-top: 50%;
     }
   }
 }
