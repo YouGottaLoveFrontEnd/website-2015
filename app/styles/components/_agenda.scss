@@ -20,8 +20,8 @@
             background: transparentize($color-green, 0.75);
 
             &:after {
-                @include transition(opacity 250ms);
-                opacity: 0;
+                @include transition(height 250ms);
+                height: 0;
             }
 
             .agenda-abstract {
@@ -31,15 +31,18 @@
         }
 
         &:after {
-            @include transition(opacity 500ms);
+            @include transition(height 500ms);
             @include transition-delay(100ms);
             @include background-image(linear-gradient(to bottom, rgba(255, 255, 255, 0) -75%, #FFF 50%));
             content: 'Hover to see more';
             position: absolute;
+            display: block;
+            overflow: hidden;
             height: 50px;
-            left: 20px;
+            left: 0;
             bottom: -10px;
             right: 0;
+            padding-left: 20px;
             color: $color-green;
             text-decoration: none;
             line-height: 75px;

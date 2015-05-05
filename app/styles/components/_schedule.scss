@@ -22,7 +22,7 @@
   .schedule-timetable {
     position: absolute;
     width: 90%;
-    padding: 25px;
+    padding: 50px 50px 80px 50px;
     background: white;
     font-size: 0.8rem;
     @include box-shadow(7px 4px 46px 1px rgba(0,0,0,0.27));
@@ -51,6 +51,7 @@
         display: inline-block;
         color: $color-green;
         cursor: pointer;
+        font-size: 19px;
         margin: 0 15px;
         margin-top: 15px;
         margin-bottom: 25px;
@@ -120,6 +121,10 @@
 
         td {
           position: relative;
+
+          &:first-child {
+            font-weight: 400 !important;
+          }
         }
 
         td:not([colspan]) {
