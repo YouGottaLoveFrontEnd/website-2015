@@ -41,15 +41,21 @@
         padding-bottom: 10px;
       }
 
-  .sponsors-logo:nth-child(1){
-    width: 45%;
+  .diamond {
+    .sponsors-logo:nth-child(1) {
+      width: 45%;
+    }
+
+    .sponsors-logo:nth-child(2) {
+      width: 55%;
+    }
   }
 
-  .sponsors-logo:nth-child(2){
-    width: 55%;
-  }
+  .gold {
+      margin-top: 5%;
 
-  .has-section-spacing + .has-section-spacing:nth-child(2) {
-    margin-top: 5%;
+      .sponsors-logo:nth-child(1) {
+        width: 28%;
+      }
   }
 }
