@@ -10,6 +10,15 @@
 		width: 100%;
 	}
 
+  .sponsors-logo:nth-child(1){
+    width: 45%;
+  }
+
+  .sponsors-logo:nth-child(2){
+    width: 55%;
+  }
+
+
 	@include respond-to("phablet") {
 		width: 50%;
 	}
@@ -29,4 +38,12 @@
 	a:not(:hover) {
 		@include filter(grayscale(1));
 	}
+}
+
+#sponsors{
+    width: 60%;
+      .important{
+        color: #00d09d;
+        padding-bottom: 10px;
+      }
 }
