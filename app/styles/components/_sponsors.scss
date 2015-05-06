@@ -40,12 +40,14 @@
         padding-bottom: 10px;
       }
 
+  ul:nth-child(1) {
 
-  .sponsors-logo:nth-child(1){
-    width: 45%;
-  }
+    .sponsors-logo:nth-child(1) {
+      width: 45%;
+    }
 
-  .sponsors-logo:nth-child(2){
-    width: 55%;
+    .sponsors-logo:nth-child(2) {
+      width: 55%;
+    }
   }
 }
