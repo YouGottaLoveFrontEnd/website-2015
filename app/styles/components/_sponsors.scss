@@ -64,4 +64,10 @@
         width: 28%;
       }
   }
+  .bigger {
+    @include scale(1.1)
+  }
+  .smaller {
+    @include scale(0.9)
+  }
 }
